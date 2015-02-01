@@ -1,6 +1,7 @@
 ﻿@model thewall9.data.binding.PageWeb
 @{
     Layout = "~/Views/Shared/_LayoutIntern.cshtml";
+    var _UrlContactSuccess = "http://" + Request.Url.Authority + Request.Url.AbsolutePath + "?contact=true";
 }
 <section>
     <div>
@@ -40,58 +41,55 @@
                         </p>
                     </div>
                     <div class="col-md-9">
-                        <div id='crmWebToEntityForm'>
-                            <form action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads1280667000000077060 method='POST'>
-                                <input type='text' style='display:none;' name='xnQsjsdp' value='LDixBJy8ngNthYo@kRl79w$$' />
-                                <input type='hidden' name='zc_gad' id='zc_gad' value='' />
-                                <input type='text' style='display:none;' name='xmIwtLD' value='4YXvI2lXP@ByXABGh8UW-e5aln7sxYgw' />
-                                <input type='text' style='display:none;' name='actionType' value='TGVhZHM=' />
-                                <input type='text' style='display:none;' name='returnURL' value='http&#x3a;&#x2f;&#x2f;thewall9.com&#x2f;contactanos&#x3f;contact&#x3d;True' />
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>
-                                                @Html.FindValue(Model, "name")
-                                            </label>
-                                            <input type="text" class="form-control" name='First Name' placeholder="@Html.FindValue(Model, "name-placeholder")" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>
-                                                @Html.FindValue(Model, "lastname")
-                                            </label>
-                                            <input type="text" class="form-control" name='Last Name' placeholder="@Html.FindValue(Model, "lastname-placeholder")" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>
-                                                @Html.FindValue(Model, "company")
-                                            </label>
-                                            <input type="text" class="form-control" name='Company' placeholder="@Html.FindValue(Model, "company-placeholder")" required>
-                                        </div>
+                        <script type="text/javascript">var submitted = false;</script>
+                        <iframe name="hidden_iframe" id="hidden_iframe"
+                                style="display:none;" onload="if(submitted){window.location='@_UrlContactSuccess';}"></iframe>
+                        <form action="https://docs.google.com/forms/d/1ksjzIt1KJvIT59trmMq597unfO2dzuKKqTiwVZBN8dI/formResponse" method="post"
+                              target="hidden_iframe" onsubmit="submitted=true;">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>
+                                            @Html.FindValue(Model, "name")
+                                        </label>
+                                        <input type="text" class="form-control" id="entry_823269835" name="entry.823269835" placeholder="@Html.FindValue(Model, "name-placeholder")" required>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>
-                                                @Html.FindValue(Model, "email")
-                                            </label>
-                                            <input type="email" class="form-control" name='Email' placeholder="@Html.FindValue(Model, "email-placeholder")" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>
-                                                @Html.FindValue(Model, "phone")
-                                            </label>
-                                            <input type="text" class="form-control" name='Phone' placeholder="@Html.FindValue(Model, "phone-placeholder")" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>
-                                                @Html.FindValue(Model, "description")
-                                            </label>
-                                            <textarea class="form-control" name='Description' placeholder="@Html.FindValue(Model, "description-placeholder")"></textarea>
-                                        </div>
+                                    <div class="form-group">
+                                        <label>
+                                            @Html.FindValue(Model, "lastname")
+                                        </label>
+                                        <input type="text" class="form-control" name="entry.1377698265" id="entry_1377698265" placeholder="@Html.FindValue(Model, "lastname-placeholder")" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>
+                                            @Html.FindValue(Model, "company")
+                                        </label>
+                                        <input type="text" class="form-control" name="entry.469841352" id="entry_469841352" placeholder="@Html.FindValue(Model, "company-placeholder")" required>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-default">@Html.FindValue(Model, "contact-btn-text")</button>
-                            </form>
-                        </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>
+                                            @Html.FindValue(Model, "email")
+                                        </label>
+                                        <input type="email" class="form-control" name="entry.1181019133" id="entry_1181019133" placeholder="@Html.FindValue(Model, "email-placeholder")" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>
+                                            @Html.FindValue(Model, "phone")
+                                        </label>
+                                        <input type="text" class="form-control" name="entry.105312061" id="entry_105312061" placeholder="@Html.FindValue(Model, "phone-placeholder")" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>
+                                            @Html.FindValue(Model, "description")
+                                        </label>
+                                        <textarea class="form-control" name="entry.1399328356" id="entry_1399328356" placeholder="@Html.FindValue(Model, "description-placeholder")"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-default">@Html.FindValue(Model, "contact-btn-text")</button>
+                        </form>
                     </div>
                 </div>
             </div>
