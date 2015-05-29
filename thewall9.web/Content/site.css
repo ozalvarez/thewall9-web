@@ -107,6 +107,8 @@ a:hover {
   -o-animation: glowIt 4s infinite;
   animation: glowIt 4s infinite;
   border-color: #ff0000;
+  background-color: #ff0000;
+  color: #FFF;
 }
 /*WORK*/
 #work #work-list a.img {
