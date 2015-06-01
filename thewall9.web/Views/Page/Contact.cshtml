@@ -22,6 +22,10 @@
                     <p class="alert alert-success text-center">
                         @Html.FindValue(Model, "contact-success")
                     </p>
+                    <script>
+                        console.log("Pushing Event")
+                        _gaq.push(['_trackEvent', 'All', 'Contact']);
+                    </script>
                 }
                 <div class="row">
                     <div class="col-md-3">
