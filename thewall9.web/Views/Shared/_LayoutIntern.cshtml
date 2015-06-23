@@ -9,10 +9,10 @@
     @Html.MetatagDescription()
     <title>@Html.TitlePageText()</title>
     @RenderSection("styles", required: false)
-    @Styles.Render("~/Content/sidr")
-    @Styles.Render("~/Content/css")
+    <link href='~/content/min/sider.light.css' rel='stylesheet' type='text/css'>
+    <link href='~/content/min/app.css' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Exo:400,800' rel='stylesheet' type='text/css'>
-    @Scripts.Render("~/bundles/modernizr")
+    <script src="~/scripts/min/modernizr.js"></script>
     @if (!Request.IsLocal)
     {
         <script type="text/javascript" src="https://mylivechat.com/chatinline.aspx?hccid=51184327"></script>
@@ -31,10 +31,8 @@
         </a>
     </header>
     @RenderBody()
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/scripts/min/app.js"></script>
     @RenderSection("scripts", required: false)
-    @Scripts.Render("~/bundles/sidr")
     <script type="text/javascript">
         $(document).ready(function () {
             $('#simple-menu').sidr({
@@ -42,6 +40,5 @@
             });
         });
     </script>
-
 </body>
 </html>

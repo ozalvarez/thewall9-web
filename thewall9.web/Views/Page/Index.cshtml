@@ -22,11 +22,12 @@
     </div>
 </div>
 @section styles{
-    @Styles.Render("~/Content/text-rotator")
+    <link href='~/content/min/text-rotator.css' rel='stylesheet' type='text/css'>
 }
 @section scripts{
-    @Scripts.Render("~/bundles/jquery-text-rotator")
-    @Scripts.Render("~/bundles/vide")
+    @*<script src="~/scripts/min/text-rotator.js"></script>
+        <script src="~/scripts/min/vide.js"></script>*@
+    <script src="~/scripts/min/home.js"></script>
     <script>
         $(document).ready(function () {
             $('.rotate').textrotator({

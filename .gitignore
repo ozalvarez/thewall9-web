@@ -6,6 +6,13 @@
 *.user
 *.sln.docstates
 
+#Bower
+bower_components/
+lib/
+
+#Grunt
+node_modules/
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
