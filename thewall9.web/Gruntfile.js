@@ -41,7 +41,7 @@ module.exports = function (grunt) {
                 }
             },
             textrotator: {
-                files: { 'scripts/min/text-rotator.js': ['scripts/jquery.simple-text-rotator.min'] }
+                files: { 'scripts/min/text-rotator.js': ['scripts/jquery.simple-text-rotator.min.js'] }
             },
             vide: {
                 files: { 'scripts/min/vide.js': ['lib/vide/jquery.vide.js'] }
