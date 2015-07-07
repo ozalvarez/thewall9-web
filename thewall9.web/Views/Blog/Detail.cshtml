@@ -1,0 +1,43 @@
+﻿@model thewall9.data.binding.BlogPostWeb
+@{
+    var _Content = ViewBag.BlogContent as thewall9.data.binding.ContentBindingList;
+    var _Image = string.IsNullOrEmpty(Model.FeatureImageUrl)
+        ? Html.FindValue(_Content, "header").ToString()
+        : Model.FeatureImageUrl;
+}
+@section styles{
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+}
+<section class="blog">
+    <header class="intro-header" style="background-image: url('@_Image')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>@Model.Title</h1>
+                        <h2 class="subheading">@Model.ContentPreview</h2>
+                        <span class="meta">@String.Format("{0:f}", Model.DateCreated)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    @Html.Raw(Model.Content)
+                </div>
+            </div>
+        </div>
+    </article>
+    @*@foreach (var item in Model.Categories)
+        {
+            <p>
+                <a href="@Url.Action("index", "blog", new { BlogCategoryFriendlyUrl = item.FriendlyUrl })">@item.BlogCategoryName</a>
+            </p>
+
+        }*@
+</section>

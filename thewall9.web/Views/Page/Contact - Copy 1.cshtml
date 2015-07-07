@@ -1,22 +1,20 @@
 ﻿@model thewall9.data.binding.PageWeb
 @{
+    Layout = "~/Views/Shared/_LayoutIntern.cshtml";
     var _UrlContactSuccess = "http://" + Request.Url.Authority + Request.Url.AbsolutePath + "?contact=true";
 }
 <section>
-    <header class="intro-header" style="background-image: url('@Html.FindValue(Model, "header")')">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="page-heading">
-                        <h1>@Html.FindValue(Model, "title")</h1>
-                        <hr class="small">
-                        <span class="subheading">@Html.FindValue(Model, "subtitle")</span>
-                    </div>
-                </div>
+    <div>
+        <div class="bg-white text-center">
+            <h1>
+                @Html.FindValue(Model, "title")
+            </h1>
+            <div class="container">
+                <h4 class="text-muted">
+                    @Html.FindValue(Model, "subtitle")
+                </h4>
             </div>
         </div>
-    </header>
-    <div>
         <div class="bg-white margin-top">
             <div class="container">
                 @if (Request.QueryString["contact"] != null)
@@ -40,7 +38,7 @@
                             <br>
                             <abbr title="Phone">C:</abbr> +57 (320) 863-6740
                         </address>
-                        <p class="small">
+                        <p>
                             @Html.FindValue(Model, "email-text")
                         </p>
                     </div>
@@ -50,26 +48,21 @@
                                 style="display:none;" onload="if(submitted){window.location='@_UrlContactSuccess';}"></iframe>
                         <form action="https://docs.google.com/forms/d/1ksjzIt1KJvIT59trmMq597unfO2dzuKKqTiwVZBN8dI/formResponse" method="post"
                               target="hidden_iframe" onsubmit="submitted=true;">
-                            <div class="row control-group">
+                            <div class="row">
                                 <div class="col-md-6">
-                                    <div class="form-group floating-label-form-group controls">
+                                    <div class="form-group">
                                         <label>
                                             @Html.FindValue(Model, "name")
                                         </label>
-                                        <input type="text" class="form-control"
-                                               id="entry_823269835"
-                                               name="entry.823269835"
-                                               placeholder="@Html.FindValue(Model, "name-placeholder")"
-                                               required>
-                                        <p class="help-block text-danger"></p>
+                                        <input type="text" class="form-control" id="entry_823269835" name="entry.823269835" placeholder="@Html.FindValue(Model, "name-placeholder")" required>
                                     </div>
-                                    <div class="form-group floating-label-form-group controls">
+                                    <div class="form-group">
                                         <label>
                                             @Html.FindValue(Model, "lastname")
                                         </label>
                                         <input type="text" class="form-control" name="entry.1377698265" id="entry_1377698265" placeholder="@Html.FindValue(Model, "lastname-placeholder")" required>
                                     </div>
-                                    <div class="form-group floating-label-form-group controls">
+                                    <div class="form-group">
                                         <label>
                                             @Html.FindValue(Model, "company")
                                         </label>
@@ -77,19 +70,19 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-group floating-label-form-group controls">
+                                    <div class="form-group">
                                         <label>
                                             @Html.FindValue(Model, "email")
                                         </label>
                                         <input type="email" class="form-control" name="entry.1181019133" id="entry_1181019133" placeholder="@Html.FindValue(Model, "email-placeholder")" required>
                                     </div>
-                                    <div class="form-group floating-label-form-group controls">
+                                    <div class="form-group">
                                         <label>
                                             @Html.FindValue(Model, "phone")
                                         </label>
                                         <input type="text" class="form-control" name="entry.105312061" id="entry_105312061" placeholder="@Html.FindValue(Model, "phone-placeholder")" required>
                                     </div>
-                                    <div class="form-group floating-label-form-group controls">
+                                    <div class="form-group">
                                         <label>
                                             @Html.FindValue(Model, "description")
                                         </label>
@@ -98,7 +91,7 @@
                                     <input type="hidden" name="entry.1207457641" id="entry_1207457641" value="@Html.GetSourceMedium()" />
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-default btn-on">@Html.FindValue(Model, "contact-btn-text")</button>
+                            <button type="submit" class="btn btn-default">@Html.FindValue(Model, "contact-btn-text")</button>
                         </form>
                     </div>
                 </div>

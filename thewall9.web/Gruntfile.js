@@ -9,7 +9,9 @@ module.exports = function (grunt) {
             development: {
                 files: {
                     "Content/site.css": "Content/site.less",
-                    "lib/bootstrap/bootstrap.css": "bower_components/bootstrap/less/bootstrap.less"
+                    "Content/site2.css": "Content/site2.less",
+                    "lib/bootstrap/bootstrap.css": "bower_components/bootstrap/less/bootstrap.less",
+                    "Content/clean-blog/clean-blog.css": "Content/clean-blog/clean-blog.less"
                 }
             }
         },
@@ -25,7 +27,18 @@ module.exports = function (grunt) {
                     'content/min/sider.light.css': 'Content/jquery.sidr.light.css',
                     'content/min/text-rotator.css': 'Content/simpletextrotator.css'
                 }
-            }
+            },
+            target2: {
+                files: {
+                    'Content/min/app2.css': [
+                        'lib/bootstrap/bootstrap.css',
+                        'lib/font-awesome/font-awesome.css',
+                        "Content/clean-blog/clean-blog.css",
+                        "Content/site2.css"
+                    ],
+                    'content/min/text-rotator.css': 'Content/simpletextrotator.css'                                                                                                                                                                                                                                               
+                }
+            },
         },
         uglify: {
             modernizr: {
@@ -37,6 +50,14 @@ module.exports = function (grunt) {
                             'lib/jquery/jquery.js',
                             'lib/bootstrap/bootstrap.js',
                             'scripts/jquery.sidr.min.js'
+                    ]
+                }
+            },
+            app2: {
+                files: {
+                    'Scripts/min/app2.js': [
+                            'lib/jquery/jquery.js',
+                            'lib/bootstrap/bootstrap.js',
                     ]
                 }
             },
@@ -70,8 +91,8 @@ module.exports = function (grunt) {
         },
         watch: {
             css: {
-                files: ['Content/site.less'],
-                tasks: ['less']
+                files: ['Content/site.less', 'Content/site2.less', 'Content/clean-blog/clean-blog.less'],
+                tasks: ['less','cssmin:target2']
             }
         },
         copy: {

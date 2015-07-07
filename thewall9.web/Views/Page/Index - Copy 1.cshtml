@@ -1,4 +1,5 @@
 ﻿@model thewall9.data.binding.PageWeb
+@*<div class="layer"></div>*@
 <div class="black-dot-background-overlay"></div>
 <div id="home" class="wrapper">
     <div class="container">
@@ -14,7 +15,7 @@
             </span>
         </h2>
         <p class="text-center btns">
-            <a class="btn btn-lg btn-default btn-on" href="@Html.FindValue(Model, "contact-btn-url")" id="contact-btn">
+            <a class="btn btn-lg btn-primary" href="@Html.FindValue(Model, "contact-btn-url")" id="contact-btn">
                 @Html.FindValue(Model, "contact-btn-text")
             </a>
         </p>

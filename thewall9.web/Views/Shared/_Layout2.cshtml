@@ -1,0 +1,60 @@
+﻿@{
+    var _LayoutContent = Html.GetSite().ContentLayout;
+}
+<!DOCTYPE html>
+<html lang="@Html.CurrentLang()">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Html.MetatagDescription()
+    <title>@Html.TitlePageText()</title>
+    @RenderSection("styles", required: false)
+    <link href='~/content/min/app2.css' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script src="~/scripts/min/modernizr.js"></script>
+    @if (!Request.IsLocal)
+    {
+        <script type="text/javascript" src="https://mylivechat.com/chatinline.aspx?hccid=51184327"></script>
+    }
+    @foreach (var item in Html.GetLangs())
+    {
+        <link rel="alternate" hreflang="@item.Name" href="@Html.LinkUrl(item)">
+    }
+</head>
+<body>
+    @Html.GAScript_QAQ()
+    @Html.Partial("_SidebarPage")
+    @RenderBody()
+    <script src="~/scripts/min/app2.js"></script>
+    @RenderSection("scripts", required: false)
+    <footer>
+        <div class="social text-center">
+            <a href="@Html.LinkFacebook()" target="_blank">
+                <i class="fa fa-facebook-square fa-2x"></i>
+            </a>
+            <a href="@Html.LinkTwitter()" target="_blank">
+                <i class="fa fa-twitter-square fa-2x"></i>
+            </a>
+            <a href="@Html.LinkInstagram()" target="_blank">
+                <i class="fa fa-instagram fa-2x"></i>
+            </a>
+            <a href="@Html.LinkGPlus()" target="_blank">
+                <i class="fa fa-google-plus-square fa-2x"></i>
+            </a>
+            <a href="@Html.LinkTumblr()" target="_blank">
+                <i class="fa fa-tumblr-square fa-2x"></i>
+            </a>
+        </div>
+        <p class="text-center">@Html.FindValue(_LayoutContent, "copyright")</p>
+        <p class="text-center">
+            @foreach (var item in Html.GetLangs())
+            {
+                <a href="@Html.LinkUrl(item)">
+                    @Html.FindValue(_LayoutContent, item.Name)
+                </a>
+            }
+        </p>
+    </footer>
+</body>
+</html>
