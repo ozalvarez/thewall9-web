@@ -429,7 +429,6 @@ p {
 }
 #home.wrapper:before,
 #home.wrapper .container {
-  /* these are the important styles for the centered element: */
   display: inline-block;
   vertical-align: middle;
 }
