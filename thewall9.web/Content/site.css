@@ -422,9 +422,7 @@ p {
 }
 #home.wrapper {
   z-index: 101;
-  /* set the height of the element which contains what you want to center */
   height: 100%;
-  /* these styles are optional, to set width horizontally center the page */
   max-width: 970px;
   margin: 0 auto;
   color: #FFF;
