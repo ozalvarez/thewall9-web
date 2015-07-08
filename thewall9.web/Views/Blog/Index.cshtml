@@ -66,6 +66,27 @@
                 {
                     @Html.PageLinks((int?)ViewBag.Page ?? 1, Model.Pages, i => Url.Action("index", "blog", new { Page = i, BlogCategoryFriendlyUrl = ViewBag.BlogCategoryFriendlyUrl }))
                 }
+                @if (Model.Tags != null && Model.Tags.Count > 0)
+                {
+                    <h4 class="text-center">TAGS</h4>
+                    foreach (var item in Model.Tags)
+                    {
+                        <a href="@Url.Action("tag", "blog", new { BlogTagName = item.BlogTagName })" class="btn btn-default btn-tag">
+                            @item.BlogTagName
+                        </a>
+                    }
+                }
+                @if (Model.Categories != null && Model.Categories.Count > 0)
+                {
+                    <h4 class="text-center">CATEGORÍAS</h4>
+                    foreach (var item in Model.Categories)
+                    {
+                        <a href="@Url.Action("index", "blog", new { BlogCategoryFriendlyUrl = item.FriendlyUrl })" class="btn btn-default btn-tag">
+                            @item.BlogCategoryName
+                        </a>
+                    }
+                }
+                <hr />
             </div>
         </div>
     </div>
