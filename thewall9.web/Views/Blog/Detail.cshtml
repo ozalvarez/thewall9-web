@@ -5,6 +5,7 @@
         ? Html.FindValue(_Content, "header").ToString()
         : Model.FeatureImageUrl;
     var _LayoutContent = Html.GetSite().ContentLayout;
+    var _DisqusShortname = Html.FindValue(_Content, "disqus", true).ToString();
 }
 @section styles{
     <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -17,17 +18,17 @@
 }
 <section class="blog">
     <header class="intro-header" style="background-image: url('@_Image');">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                        <div class="post-heading">
-                            <h1>@Model.Title</h1>
-                            <h2 class="subheading">@Model.ContentPreview</h2>
-                            <span class="meta">Creado el @String.Format("{0:f}", Model.DateCreated)</span>
-                        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>@Model.Title</h1>
+                        <h2 class="subheading">@Model.ContentPreview</h2>
+                        <span class="meta">Creado el @String.Format("{0:f}", Model.DateCreated)</span>
                     </div>
                 </div>
             </div>
+        </div>
     </header>
     <!-- Post Content -->
     <article>
@@ -54,10 +55,14 @@
                            li:counter="top"
                            addthis:url="@Request.Url"></a>
                     </div>
-
+                    @if (!string.IsNullOrEmpty(_DisqusShortname))
+                    {
+                        <div id="disqus_thread"></div>
+                    }
                 </div>
             </div>
         </div>
+
     </article>
     <hr />
     @*@foreach (var item in Model.Categories)
@@ -70,3 +75,20 @@
 </section>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52f4051b7aacecc3" async="async"></script>
+@if (!string.IsNullOrEmpty(_DisqusShortname))
+{
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: THIS CODE IS ONLY AN EXAMPLE * * */
+        var disqus_shortname = '@_DisqusShortname'; // Required - Replace example with your forum shortname
+        //var disqus_identifier = 'a unique identifier for each page where Disqus is present';
+        //var disqus_title = 'a unique title for each page where Disqus is present';
+        //var disqus_url = 'a unique URL for each page where Disqus is present';
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+}

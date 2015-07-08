@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @Html.MetatagDescription()
+    <meta name="description" content="@Html.MetatagDescriptionContent()" />
     <title>@Html.TitlePageText()</title>
     @RenderSection("styles", required: false)
     <link href='~/content/min/app.css' rel='stylesheet' type='text/css'>
