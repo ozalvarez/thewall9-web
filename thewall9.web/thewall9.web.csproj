@@ -148,40 +148,25 @@
     <Content Include="Content\images\logo-thewall9-white.png" />
     <Content Include="Content\images\logo-thewall9.png" />
     <Content Include="Content\images\wildtextures-concrete-wall-background-900x360.jpg" />
-    <Content Include="Content\jquery.sidr.dark.css" />
-    <Content Include="Content\jquery.sidr.light.css" />
     <Content Include="Content\min\app.css" />
-    <Content Include="Content\min\app2.css" />
     <Content Include="Content\min\sider.dark.css" />
     <Content Include="Content\min\sider.light.css" />
     <Content Include="Content\min\text-rotator.css" />
-    <Content Include="Content\site2.css">
-      <DependentUpon>site2.less</DependentUpon>
-    </Content>
-    <Content Include="Content\site2.min.css">
-      <DependentUpon>site2.css</DependentUpon>
-    </Content>
-    <Content Include="Content\video\ocean.jpg" />
-    <Content Include="Content\video\ocean.mp4" />
-    <Content Include="Gruntfile.js" />
-    <Content Include="bower.json" />
-    <Content Include="img\about-bg.jpg" />
-    <Content Include="img\contact-bg.jpg" />
-    <Content Include="img\home-bg.jpg" />
-    <Content Include="img\post-bg.jpg" />
-    <Content Include="img\post-sample-image.jpg" />
-    <Content Include="package.json" />
-    <Content Include="Scripts\jquery.vide.js" />
-    <Content Include="Content\simpletextrotator.css" />
     <Content Include="Content\site.css">
       <DependentUpon>site.less</DependentUpon>
     </Content>
     <Content Include="Content\site.min.css">
       <DependentUpon>site.css</DependentUpon>
     </Content>
+    <Content Include="Content\video\ocean.jpg" />
+    <Content Include="Content\video\ocean.mp4" />
+    <Content Include="Gruntfile.js" />
+    <Content Include="bower.json" />
+    <Content Include="package.json" />
+    <Content Include="Scripts\jquery.vide.js" />
+    <Content Include="Content\simpletextrotator.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Content\site.less" />
     <Content Include="Content\video\ocean.ogv" />
     <Content Include="Content\video\ocean.webm" />
     <Content Include="Content\fonts\fontawesome-webfont.eot" />
@@ -196,18 +181,14 @@
     <Content Include="Content\clean-blog\clean-blog.less" />
     <Content Include="Content\clean-blog\mixins.less" />
     <Content Include="Content\clean-blog\variables.less" />
-    <Content Include="Content\site2.less" />
+    <Content Include="Content\site.less" />
     <None Include="Properties\PublishProfiles\thewall9.pubxml" />
     <Content Include="robots.txt" />
-    <Content Include="Scripts\jquery.sidr.min.js.map">
-      <DependentUpon>jquery.sidr.min.js</DependentUpon>
-    </Content>
-    <Content Include="Scripts\jquery.sidr.js" />
-    <Content Include="Scripts\jquery.sidr.min.js" />
     <Content Include="Scripts\jquery.simple-text-rotator.min.js" />
     <Content Include="Scripts\min\app.js" />
     <Content Include="Scripts\min\home.js" />
     <Content Include="Scripts\min\modernizr.js" />
+    <Content Include="Scripts\min\text-rotator.js" />
     <Content Include="Scripts\min\vide.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
@@ -224,16 +205,9 @@
     <Content Include="Views\Page\Services.cshtml" />
     <Content Include="Views\Page\Contact.cshtml" />
     <Content Include="Views\Page\Index.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_SidebarPage.cshtml" />
-    <Content Include="Views\Shared\_LayoutIntern.cshtml" />
     <Content Include="Views\Page\Pricing.cshtml" />
-    <Content Include="Views\Shared\_Layout2.cshtml" />
-    <Content Include="Views\Page\Index - Copy 1.cshtml" />
-    <Content Include="Views\Shared\_SidebarPage - Copy 1.cshtml" />
-    <Content Include="Views\Page\Works - Copy 1.cshtml" />
-    <Content Include="Views\Page\Services - Copy 1.cshtml" />
-    <Content Include="Views\Page\Contact - Copy 1.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Blog\Detail.cshtml" />
     <Content Include="Views\Blog\Index.cshtml" />
   </ItemGroup>

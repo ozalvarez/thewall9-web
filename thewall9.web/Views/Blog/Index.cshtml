@@ -2,6 +2,7 @@
 
 @{
     var _Content = ViewBag.BlogContent as thewall9.data.binding.ContentBindingList;
+    ViewBag.HideBrand = true;
 }
 @section styles{
 <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -38,7 +39,7 @@
                                 @Html.DisplayFor(modelItem => item.ContentPreview)
                             </h3>
                         </a>
-                        <p class="post-meta">Posted on @String.Format("{0:f}", item.DateCreated)</p>
+                        <p class="post-meta">Creado el @String.Format("{0:f}", item.DateCreated)</p>
                     </div>
                     <hr>
                 }

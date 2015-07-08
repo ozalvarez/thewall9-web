@@ -9,7 +9,6 @@ module.exports = function (grunt) {
             development: {
                 files: {
                     "Content/site.css": "Content/site.less",
-                    "Content/site2.css": "Content/site2.less",
                     "lib/bootstrap/bootstrap.css": "bower_components/bootstrap/less/bootstrap.less",
                     "Content/clean-blog/clean-blog.css": "Content/clean-blog/clean-blog.less"
                 }
@@ -21,20 +20,8 @@ module.exports = function (grunt) {
                     'Content/min/app.css': [
                         'lib/bootstrap/bootstrap.css',
                         'lib/font-awesome/font-awesome.css',
-                        "Content/site.css"
-                    ],
-                    'content/min/sider.dark.css': 'Content/jquery.sidr.dark.css',
-                    'content/min/sider.light.css': 'Content/jquery.sidr.light.css',
-                    'content/min/text-rotator.css': 'Content/simpletextrotator.css'
-                }
-            },
-            target2: {
-                files: {
-                    'Content/min/app2.css': [
-                        'lib/bootstrap/bootstrap.css',
-                        'lib/font-awesome/font-awesome.css',
                         "Content/clean-blog/clean-blog.css",
-                        "Content/site2.css"
+                        "Content/site.css"
                     ],
                     'content/min/text-rotator.css': 'Content/simpletextrotator.css'                                                                                                                                                                                                                                               
                 }
@@ -47,15 +34,6 @@ module.exports = function (grunt) {
             app: {
                 files: {
                     'Scripts/min/app.js': [
-                            'lib/jquery/jquery.js',
-                            'lib/bootstrap/bootstrap.js',
-                            'scripts/jquery.sidr.min.js'
-                    ]
-                }
-            },
-            app2: {
-                files: {
-                    'Scripts/min/app2.js': [
                             'lib/jquery/jquery.js',
                             'lib/bootstrap/bootstrap.js',
                     ]
@@ -91,8 +69,8 @@ module.exports = function (grunt) {
         },
         watch: {
             css: {
-                files: ['Content/site.less', 'Content/site2.less', 'Content/clean-blog/clean-blog.less'],
-                tasks: ['less','cssmin:target2']
+                files: ['Content/site.less', 'Content/clean-blog/clean-blog.less'],
+                tasks: ['less','cssmin:target']
             }
         },
         copy: {
