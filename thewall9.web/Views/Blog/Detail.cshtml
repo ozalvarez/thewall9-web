@@ -36,6 +36,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     @Html.Raw(Model.Content)
+                    <h4 class="text-center">COMPARTE ESTE ARTÍCULO</h4>
                     <div class="addthis_toolbox addthis_default_style addthis_32x32_style center-block top10" style="max-width:320px">
                         <a class="addthis_button_facebook_share"
                            fb:like:layout="box_count"
@@ -55,8 +56,29 @@
                            li:counter="top"
                            addthis:url="@Request.Url"></a>
                     </div>
+                    @if (Model.Tags != null && Model.Tags.Count > 0)
+                    {
+                        <h4 class="text-center">TAGS</h4>
+                        foreach (var item in Model.Tags)
+                        {
+                            <a href="@Url.Action("tag", "blog", new { BlogTagName = item.BlogTagName })" class="btn btn-default btn-tag">
+                                @item.BlogTagName
+                            </a>
+                        }
+                    }
+                    @if (Model.Categories != null && Model.Categories.Count > 0)
+                    {
+                        <h4 class="text-center">CATEGORÍAS</h4>
+                        foreach (var item in Model.Categories)
+                        {
+                            <a href="@Url.Action("index", "blog", new { BlogCategoryFriendlyUrl = item.FriendlyUrl })" class="btn btn-default btn-tag">
+                                @item.BlogCategoryName
+                            </a>
+                        }
+                    }
                     @if (!string.IsNullOrEmpty(_DisqusShortname))
                     {
+                        <h4 class="text-center">COMENTARIOS</h4>
                         <div id="disqus_thread"></div>
                     }
                 </div>

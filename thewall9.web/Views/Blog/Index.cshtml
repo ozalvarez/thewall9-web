@@ -4,8 +4,8 @@
     var _Content = ViewBag.BlogContent as thewall9.data.binding.ContentBindingList;
 }
 @section styles{
-<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 }
 <section class="blog">
     <!-- Page Header -->
@@ -15,9 +15,24 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>@Html.FindValue(_Content, "blog-title")</h1>
+                        <h1>
+                            @Html.FindValue(_Content, "blog-title")
+                        </h1>
                         <hr class="small">
-                        <span class="subheading">@Html.FindValue(_Content, "blog-subtitle")</span>
+                        <span class="subheading">
+                            @if (ViewBag.BlogTagName != null)
+                            {
+                                <text>@ViewBag.BlogTagName</text>
+                            }
+                            else if (ViewBag.BlogCategoryFriendlyUrl != null)
+                            {
+                                <text>@ViewBag.BlogCategoryFriendlyUrl </text>
+                            }
+                            else
+                            {
+                                @Html.FindValue(_Content, "blog-subtitle")
+                            }
+                        </span>
                     </div>
                 </div>
             </div>
