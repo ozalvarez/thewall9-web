@@ -29,8 +29,6 @@
     @Html.GAScript_QAQ()
     @Html.Partial("_SidebarPage")
     @RenderBody()
-    <script src="~/scripts/min/app.js"></script>
-    @RenderSection("scripts", required: false)
     <footer>
         <div class="social text-center">
             <a href="@Html.LinkFacebook()" target="_blank">
@@ -45,21 +43,24 @@
             <a href="@Html.LinkGPlus()" target="_blank">
                 <i class="fa fa-google-plus-square fa-2x"></i>
             </a>
-            @if(Html.SiteHasBlog()){
-            <a href="@Html.LinkRss()" target="_blank">
-                <i class="fa fa-rss-square fa-2x"></i>
-            </a>
+            @if (Html.SiteHasBlog())
+            {
+                <a href="@Html.LinkRss()" target="_blank">
+                    <i class="fa fa-rss-square fa-2x"></i>
+                </a>
             }
         </div>
         <p class="text-center">@Html.FindValue(_LayoutContent, "copyright")</p>
         <p class="text-center">
             @foreach (var item in Html.GetLangs())
             {
-            <a href="@Html.LinkUrl(item)" style="margin-left:10px;">
-                @Html.FindValue(_LayoutContent, item.Name)
-            </a>
+                <a href="@Html.LinkUrl(item)" style="margin-left:10px;">
+                    @Html.FindValue(_LayoutContent, item.Name)
+                </a>
             }
         </p>
     </footer>
+    <script src="~/scripts/min/app.js"></script>
+    @RenderSection("scripts", required: false)
 </body>
 </html>
