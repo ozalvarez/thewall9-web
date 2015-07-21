@@ -69,7 +69,7 @@ module.exports = function (grunt) {
         },
         watch: {
             css: {
-                files: ['Content/site.less', 'Content/clean-blog/clean-blog.less'],
+                files: ['Content/site.less', 'Content/clean-blog/clean-blog.less', 'content/clean-blog/variables.less'],
                 tasks: ['less','cssmin:target']
             }
         },
