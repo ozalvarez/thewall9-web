@@ -409,7 +409,7 @@ p {
   background-color: rgba(0, 0, 0, 0.7);
   background-repeat: repeat;
   background-position: center center;
-  z-index: -1;
+  z-index: 0;
   content: "";
   display: block;
   position: absolute;
@@ -421,7 +421,8 @@ p {
   width: 100%;
 }
 #home.wrapper {
-  z-index: 101;
+  position: relative;
+  z-index: 1;
   height: 100%;
   max-width: 970px;
   margin: 0 auto;
