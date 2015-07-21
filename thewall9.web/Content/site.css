@@ -24,7 +24,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #d80a0a;
+  color: #ff1449;
 }
 a img:hover,
 a img:focus {
@@ -108,14 +108,14 @@ hr.small {
   }
   .navbar-custom.is-fixed .navbar-brand:hover,
   .navbar-custom.is-fixed .navbar-brand:focus {
-    color: #d80a0a;
+    color: #ff1449;
   }
   .navbar-custom.is-fixed .nav li a {
     color: #404040;
   }
   .navbar-custom.is-fixed .nav li a:hover,
   .navbar-custom.is-fixed .nav li a:focus {
-    color: #d80a0a;
+    color: #ff1449;
   }
   .navbar-custom.is-visible {
     /* if the user changes the scrolling direction, we show the header */
@@ -210,7 +210,7 @@ hr.small {
 .post-preview > a:hover,
 .post-preview > a:focus {
   text-decoration: none;
-  color: #d80a0a;
+  color: #ff1449;
 }
 .post-preview > a > .post-title {
   font-size: 30px;
@@ -234,7 +234,7 @@ hr.small {
 }
 .post-preview > .post-meta > a:hover,
 .post-preview > .post-meta > a:focus {
-  color: #d80a0a;
+  color: #ff1449;
   text-decoration: underline;
 }
 @media only screen and (min-width: 768px) {
@@ -314,7 +314,7 @@ footer .copyright {
   opacity: 1;
 }
 .floating-label-form-group-with-focus label {
-  color: #d80a0a;
+  color: #ff1449;
 }
 form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
@@ -334,8 +334,8 @@ form .row:first-child .floating-label-form-group {
 }
 .btn-default:hover,
 .btn-default:focus {
-  background-color: #d80a0a;
-  border: 1px solid #d80a0a;
+  background-color: #ff1449;
+  border: 1px solid #ff1449;
   color: white;
 }
 .pager {
@@ -355,8 +355,8 @@ form .row:first-child .floating-label-form-group {
 .pager li > a:hover,
 .pager li > a:focus {
   color: white;
-  background-color: #d80a0a;
-  border: 1px solid #d80a0a;
+  background-color: #ff1449;
+  border: 1px solid #ff1449;
 }
 .pager .disabled > a,
 .pager .disabled > a:hover,
@@ -369,12 +369,12 @@ form .row:first-child .floating-label-form-group {
 ::-moz-selection {
   color: white;
   text-shadow: none;
-  background: #d80a0a;
+  background: #ff1449;
 }
 ::selection {
   color: white;
   text-shadow: none;
-  background: #d80a0a;
+  background: #ff1449;
 }
 img::selection {
   color: white;
@@ -385,7 +385,7 @@ img::-moz-selection {
   background: transparent;
 }
 body {
-  webkit-tap-highlight-color: #d80a0a;
+  webkit-tap-highlight-color: #ff1449;
 }
 html,
 body {
@@ -398,8 +398,8 @@ p {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .btn-on {
-  border-color: #d80a0a;
-  background-color: #d80a0a;
+  border-color: #ff1449;
+  background-color: #ff1449;
   color: #FFF;
 }
 .top10 {
