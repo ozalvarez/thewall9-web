@@ -9,8 +9,9 @@
     <meta name="description" content="@Html.MetatagDescriptionContent()" />
     <title>@Html.TitlePageText()</title>
     @RenderSection("styles", required: false)
-    @if(Html.SiteHasBlog()){
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="@Html.LinkRss()">
+    @if (Html.SiteHasBlog())
+    {
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="@Html.LinkRss()">
     }
     <link href='~/content/min/app.css' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -18,46 +19,60 @@
     <script src="~/scripts/min/modernizr.js"></script>
     @if (!Request.IsLocal)
     {
-    <script type="text/javascript" src="https://mylivechat.com/chatinline.aspx?hccid=51184327"></script>
+        <script type="text/javascript" src="https://mylivechat.com/chatinline.aspx?hccid=51184327"></script>
     }
     @*@foreach (var item in Html.GetLangs())
-    {
-    <link rel="alternate" hreflang="@item.Name" href="@Html.LinkUrl(item)">
-    }*@
+        {
+        <link rel="alternate" hreflang="@item.Name" href="@Html.LinkUrl(item)">
+        }*@
 </head>
 <body>
     @Html.GAScript_QAQ()
     @Html.Partial("_SidebarPage")
     @RenderBody()
     <footer>
-        <div class="social text-center">
-            <a href="@Html.LinkFacebook()" target="_blank">
-                <i class="fa fa-facebook-square fa-2x"></i>
-            </a>
-            <a href="@Html.LinkTwitter()" target="_blank">
-                <i class="fa fa-twitter-square fa-2x"></i>
-            </a>
-            <a href="@Html.LinkInstagram()" target="_blank">
-                <i class="fa fa-instagram fa-2x"></i>
-            </a>
-            <a href="@Html.LinkGPlus()" target="_blank">
-                <i class="fa fa-google-plus-square fa-2x"></i>
-            </a>
+        <ul class="list-inline text-center">
+            <li>
+                <a href="@Html.LinkFacebook()" target="_blank">
+                    <i class="fa fa-facebook-square fa-2x"></i>
+                </a>
+            </li>
+            <li>
+                <a href="@Html.LinkTwitter()" target="_blank">
+                    <i class="fa fa-twitter-square fa-2x"></i>
+                </a>
+            </li>
+            <li>
+                <a href="@Html.LinkInstagram()" target="_blank">
+                    <i class="fa fa-instagram fa-2x"></i>
+                </a>
+            </li>
+            <li>
+                <a href="@Html.LinkGPlus()" target="_blank">
+                    <i class="fa fa-google-plus-square fa-2x"></i>
+                </a>
+            </li>
             @if (Html.SiteHasBlog())
             {
-                <a href="@Html.LinkRss()" target="_blank">
-                    <i class="fa fa-rss-square fa-2x"></i>
-                </a>
+                <li>
+                    <a href="@Html.LinkRss()" target="_blank">
+                        <i class="fa fa-rss-square fa-2x"></i>
+                    </a>
+                </li>
             }
-        </div>
-        <p class="text-center">@Html.FindValue(_LayoutContent, "copyright")</p>
-        <p class="text-center">
+        </ul>
+        <ul class="list-inline text-center small">
             @foreach (var item in Html.GetLangs())
             {
-                <a href="@Html.LinkUrl(item)" style="margin-left:10px;">
-                    @Html.FindValue(_LayoutContent, item.Name)
-                </a>
+                <li>
+                    <a href="@Html.LinkUrl(item)" style="margin-left:10px;">
+                        @Html.FindValue(_LayoutContent, item.Name)
+                    </a>
+                </li>
             }
+        </ul>
+        <p class="text-center small">
+            @Html.FindValue(_LayoutContent, "copyright")
         </p>
     </footer>
     <script src="~/scripts/min/app.js"></script>
