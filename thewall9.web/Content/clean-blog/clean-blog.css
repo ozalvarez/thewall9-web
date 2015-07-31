@@ -258,16 +258,11 @@ hr.small {
   border-bottom-left-radius: 5px;
 }
 footer {
-  padding: 50px 0 65px;
+  padding: 25px 0;
 }
 footer .list-inline {
-  margin: 0;
+  margin: 25px 0;
   padding: 0;
-}
-footer .copyright {
-  font-size: 14px;
-  text-align: center;
-  margin-bottom: 0;
 }
 .floating-label-form-group {
   font-size: 14px;

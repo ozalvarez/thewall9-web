@@ -151,8 +151,6 @@
     <Content Include="Content\images\logo-thewall9.png" />
     <Content Include="Content\images\wildtextures-concrete-wall-background-900x360.jpg" />
     <Content Include="Content\min\app.css" />
-    <Content Include="Content\min\sider.dark.css" />
-    <Content Include="Content\min\sider.light.css" />
     <Content Include="Content\min\text-rotator.css" />
     <Content Include="Content\site.css">
       <DependentUpon>site.less</DependentUpon>
