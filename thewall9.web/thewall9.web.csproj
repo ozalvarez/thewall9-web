@@ -144,6 +144,7 @@
     </Content>
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\images\home-thewall9.jpg" />
     <Content Include="Content\images\logo-thewall9-black.png" />
     <Content Include="Content\images\logo-thewall9-white-big.png" />
     <Content Include="Content\images\logo-thewall9-white.png" />
@@ -159,17 +160,12 @@
     <Content Include="Content\site.min.css">
       <DependentUpon>site.css</DependentUpon>
     </Content>
-    <Content Include="Content\video\ocean.jpg" />
-    <Content Include="Content\video\ocean.mp4" />
     <Content Include="Gruntfile.js" />
     <Content Include="bower.json" />
     <Content Include="package.json" />
-    <Content Include="Scripts\jquery.vide.js" />
     <Content Include="Content\simpletextrotator.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Content\video\ocean.ogv" />
-    <Content Include="Content\video\ocean.webm" />
     <Content Include="Content\fonts\fontawesome-webfont.eot" />
     <Content Include="Content\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\fonts\fontawesome-webfont.woff" />
@@ -190,7 +186,6 @@
     <Content Include="Scripts\min\home.js" />
     <Content Include="Scripts\min\modernizr.js" />
     <Content Include="Scripts\min\text-rotator.js" />
-    <Content Include="Scripts\min\vide.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -221,11 +216,11 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\thewall9GIT\thewall9.data.binding\thewall9.data.binding.csproj">
+    <ProjectReference Include="..\..\thewall9-CMS\thewall9.data.binding\thewall9.data.binding.csproj">
       <Project>{354569c5-3de8-4599-954a-4cf4f3529a14}</Project>
       <Name>thewall9.data.binding</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\thewall9GIT\thewall9.web.parent\thewall9.web.parent.csproj">
+    <ProjectReference Include="..\..\thewall9-CMS\thewall9.web.parent\thewall9.web.parent.csproj">
       <Project>{7327cd77-97ee-4c1c-9ddb-b97ed07fa861}</Project>
       <Name>thewall9.web.parent</Name>
     </ProjectReference>

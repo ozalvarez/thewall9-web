@@ -2,27 +2,29 @@
 @{
     ViewBag.HideBrand = true;
 }
-<div class="black-dot-background-overlay"></div>
-<div id="home" class="wrapper">
-    <div class="container">
-        <a href="@Html.LinkHome()" class="logo center-block">
-            <img src="@Url.Content("~/Content/images/logo-thewall9.png")" class="img-responsive" alt="thewall9">
-        </a>
-        <h1 class="text-center">
-            @Html.FindValue(Model, "h1")
-        </h1>
-        <h2 class="text-center">
-            <span class="rotate">
-                @Html.FindValue(Model, "h2")
-            </span>
-        </h2>
-        <p class="text-center">
-            <a class="btn btn-lg btn-default btn-on" href="@Html.FindValue(Model, "contact-btn-url")" id="contact-btn">
-                @Html.FindValue(Model, "contact-btn-text")
+<section id="home">
+    <div class="black-dot-background-overlay"></div>
+    <div class="wrapper">
+        <div class="container">
+            <a href="@Html.LinkHome()" class="logo center-block">
+                <img src="@Url.Content("~/Content/images/logo-thewall9.png")" class="img-responsive" alt="thewall9">
             </a>
-        </p>
+            <h1 class="text-center">
+                @Html.FindValue(Model, "h1")
+            </h1>
+            <h2 class="text-center">
+                <span class="rotate">
+                    @Html.FindValue(Model, "h2")
+                </span>
+            </h2>
+            <p class="text-center">
+                <a class="btn btn-lg btn-default btn-on" href="@Html.FindValue(Model, "contact-btn-url")" id="contact-btn">
+                    @Html.FindValue(Model, "contact-btn-text")
+                </a>
+            </p>
+        </div>
     </div>
-</div>
+</section>
 @section styles{
     <link href='~/content/min/text-rotator.css' rel='stylesheet' type='text/css'>
 }
@@ -35,7 +37,7 @@
                 separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
                 speed: 7000 // How many milliseconds until the next word show.
             });
-            $(document.body).vide("content/video/ocean");
+            //$(document.body).vide("content/video/ocean");
         });
     </script>
 }

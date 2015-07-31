@@ -42,13 +42,9 @@ module.exports = function (grunt) {
             textrotator: {
                 files: { 'scripts/min/text-rotator.js': ['scripts/jquery.simple-text-rotator.min.js'] }
             },
-            vide: {
-                files: { 'scripts/min/vide.js': ['lib/vide/jquery.vide.js'] }
-            },
             home: {
                 files: {
                     'scripts/min/home.js': [
-                        'lib/vide/jquery.vide.js',
                         'scripts/jquery.simple-text-rotator.min.js'
                     ]
                 }
@@ -69,7 +65,7 @@ module.exports = function (grunt) {
         },
         watch: {
             css: {
-                files: ['Content/site.less', 'Content/clean-blog/clean-blog.less', 'content/clean-blog/variables.less'],
+                files: ['content/site.less', 'content/clean-blog/clean-blog.less', 'content/clean-blog/variables.less'],
                 tasks: ['less','cssmin:target']
             }
         },
