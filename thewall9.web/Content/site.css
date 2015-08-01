@@ -400,13 +400,7 @@ p {
 .top10 {
   margin-top: 10px;
 }
-section#home {
-  background: url(/content/images/home-thewall9.jpg) no-repeat center center fixed;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-}
-section#home .black-dot-background-overlay {
+.black-dot-background-overlay {
   background-color: rgba(0, 0, 0, 0.45);
   z-index: 0;
   position: absolute;
@@ -414,6 +408,12 @@ section#home .black-dot-background-overlay {
   left: 0;
   height: 100%;
   width: 100%;
+}
+section#home {
+  background: url(/content/images/home-thewall9.jpg) no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 section#home .wrapper {
   position: relative;
@@ -480,21 +480,26 @@ section#home .wrapper .container a.logo {
   margin: 5px 0;
   padding: 5px 0;
 }
-@media only screen and (max-width: 768px) {
+/*TABLET PORTRAIT*/
+@media only screen and (max-width: 767px) {
   body {
     padding-top: 50px;
   }
 }
+/*CLEAN BLOG*/
 .btn-tag {
   font-size: 12px;
   font-weight: 600;
   padding: 8px 10px;
   margin-top: 5px;
 }
+.intro-header {
+  /*TABLET PORTRAIT*/
+}
 .intro-header .post-heading {
   background-color: rgba(0, 0, 0, 0.3);
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .intro-header {
     margin-bottom: 10px;
   }

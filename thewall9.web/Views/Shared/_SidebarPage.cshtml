@@ -4,7 +4,6 @@
 }
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
     <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
@@ -17,7 +16,6 @@
                 <a class="navbar-brand" href="/">thewall9</a>
             }
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 @foreach (var item in _Menu)
@@ -32,66 +30,5 @@
                 }
             </ul>
         </div>
-        <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container -->
 </nav>
-@*<a id="simple-menu" href="#sidr" class="btn btn-lg btn-primary">
-        <span class="glyphicon glyphicon-align-justify"></span>
-        <span>@Html.FindValue(_LayoutContent, "menu")</span>
-    </a>
-
-    <div id="sidr" ng-cloak>
-        <ul class="text-center">
-            <li>
-                <a href="#" onclick="$.sidr('close', 'sidr');return false;" class="text-right">&times;</a>
-            </li>
-            @foreach (var item in _Menu)
-            {
-                <li>
-                    <a href="@(item.RedirectUrl!=null ? item.RedirectUrl : '/' + item.FriendlyUrl)">
-                        @if (ViewBag.Theme == "light" && item.PageAlias.Equals("home"))
-                        {
-                            <img src="@Url.Content("~/Content/images/logo-thewall9-white.png")" />
-                        }
-                        else if (ViewBag.Theme == "dark" && item.PageAlias.Equals("home"))
-                        {
-                            <img src="@Url.Content("~/Content/images/logo-thewall9-black.png")" />
-                        }
-                        else
-                        {
-                            <div>
-                                @item.Name
-                            </div>
-                        }
-                    </a>
-                </li>
-            }
-        </ul>
-        <div class="social text-center">
-            <a href="@Html.LinkFacebook()" target="_blank">
-                <i class="fa fa-facebook-square fa-1x"></i>
-            </a>
-            <a href="@Html.LinkTwitter()" target="_blank">
-                <i class="fa fa-twitter-square fa-1x"></i>
-            </a>
-            <a href="@Html.LinkInstagram()" target="_blank">
-                <i class="fa fa-instagram fa-1x"></i>
-            </a>
-            <a href="@Html.LinkGPlus()" target="_blank">
-                <i class="fa fa-google-plus-square fa-1x"></i>
-            </a>
-            <a href="@Html.LinkTumblr()" target="_blank">
-                <i class="fa fa-tumblr-square fa-1x"></i>
-            </a>
-        </div>
-        <p class="text-center">@Html.FindValue(_LayoutContent, "copyright")</p>
-        <p class="text-center">
-            @foreach (var item in Html.GetLangs())
-            {
-                <a href="@Html.LinkUrl(item)">
-                    @Html.FindValue(_LayoutContent, item.Name)
-                </a>
-            }
-        </p>
-    </div>*@
