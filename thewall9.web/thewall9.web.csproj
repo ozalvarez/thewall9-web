@@ -209,11 +209,11 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\thewall9GIT\thewall9.data.binding\thewall9.data.binding.csproj">
+    <ProjectReference Include="..\..\thewall9-CMS\thewall9.data.binding\thewall9.data.binding.csproj">
       <Project>{354569c5-3de8-4599-954a-4cf4f3529a14}</Project>
       <Name>thewall9.data.binding</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\thewall9GIT\thewall9.web.parent\thewall9.web.parent.csproj">
+    <ProjectReference Include="..\..\thewall9-CMS\thewall9.web.parent\thewall9.web.parent.csproj">
       <Project>{7327cd77-97ee-4c1c-9ddb-b97ed07fa861}</Project>
       <Name>thewall9.web.parent</Name>
     </ProjectReference>
