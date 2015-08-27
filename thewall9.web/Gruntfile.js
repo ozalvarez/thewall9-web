@@ -45,7 +45,9 @@ module.exports = function (grunt) {
             home: {
                 files: {
                     'scripts/min/home.js': [
-                        'scripts/jquery.simple-text-rotator.min.js'
+                        'scripts/jquery.simple-text-rotator.min.js',
+                        'scripts/grained.min.js',
+                        'scripts/app/home.js'
                     ]
                 }
             }
@@ -67,6 +69,10 @@ module.exports = function (grunt) {
             css: {
                 files: ['content/site.less', 'content/clean-blog/clean-blog.less', 'content/clean-blog/variables.less'],
                 tasks: ['less','cssmin:target']
+            },
+            js: {
+                files: ['scripts/app/*'],
+                tasks: ['uglify:home']
             }
         },
         copy: {

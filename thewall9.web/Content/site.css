@@ -400,15 +400,15 @@ p {
 .top10 {
   margin-top: 10px;
 }
-.black-dot-background-overlay {
-  background-color: rgba(0, 0, 0, 0.45);
-  z-index: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
+/*.black-dot-background-overlay {
+    background-color: rgba(0, 0, 0,0.45);
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}*/
 section#home {
   background: url(/content/images/home-thewall9.jpg) no-repeat center center fixed;
   background-size: cover;
