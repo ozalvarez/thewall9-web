@@ -199,6 +199,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Blog\Detail.cshtml" />
     <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="SITE.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
