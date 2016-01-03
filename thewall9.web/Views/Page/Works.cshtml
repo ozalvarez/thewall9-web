@@ -45,10 +45,12 @@
                 }
 
             </div>
+            <a href="@Html.FindValue(Model, "contact-btn-url")" class="btn btn-xl btn-default btn-on btn-block top10">
+                <span class="glyphicon glyphicon-envelope "></span>
+                @Html.FindValue(Model, "contact-btn-text")
+            </a>
         </div>
+        
     </div>
-    <a href="@Html.FindValue(Model, "contact-btn-url")" class="btn btn-xl btn-default btn-on btn-block top10">
-        <span class="glyphicon glyphicon-envelope "></span>
-        @Html.FindValue(Model, "contact-btn-text")
-    </a>
+    
 </section>

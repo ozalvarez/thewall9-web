@@ -160,6 +160,7 @@
     <Content Include="content\clean-blog\mixins.less" />
     <Content Include="content\clean-blog\variables.less" />
     <Content Include="content\site.less" />
+    <None Include="Properties\PublishProfiles\thewall9 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\thewall9.pubxml" />
     <Content Include="robots.txt" />
     <Content Include="scripts\app\home.js" />
