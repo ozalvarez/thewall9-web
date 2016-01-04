@@ -23,7 +23,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #ff1449;
+  color: #FF1449;
 }
 a img:hover,
 a img:focus {
@@ -107,14 +107,14 @@ hr.small {
   }
   .navbar-custom.is-fixed .navbar-brand:hover,
   .navbar-custom.is-fixed .navbar-brand:focus {
-    color: #ff1449;
+    color: #FF1449;
   }
   .navbar-custom.is-fixed .nav li a {
     color: #404040;
   }
   .navbar-custom.is-fixed .nav li a:hover,
   .navbar-custom.is-fixed .nav li a:focus {
-    color: #ff1449;
+    color: #FF1449;
   }
   .navbar-custom.is-visible {
     /* if the user changes the scrolling direction, we show the header */
@@ -209,7 +209,7 @@ hr.small {
 .post-preview > a:hover,
 .post-preview > a:focus {
   text-decoration: none;
-  color: #ff1449;
+  color: #FF1449;
 }
 .post-preview > a > .post-title {
   font-size: 30px;
@@ -233,7 +233,7 @@ hr.small {
 }
 .post-preview > .post-meta > a:hover,
 .post-preview > .post-meta > a:focus {
-  color: #ff1449;
+  color: #FF1449;
   text-decoration: underline;
 }
 @media only screen and (min-width: 768px) {
@@ -268,7 +268,7 @@ footer .list-inline {
   position: relative;
   margin-bottom: 0;
   padding-bottom: 0.5em;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #eee;
 }
 .floating-label-form-group input,
 .floating-label-form-group textarea {
@@ -301,17 +301,17 @@ footer .list-inline {
 }
 .floating-label-form-group::not(:first-child) {
   padding-left: 14px;
-  border-left: 1px solid #eeeeee;
+  border-left: 1px solid #eee;
 }
 .floating-label-form-group-with-value label {
   top: 0;
   opacity: 1;
 }
 .floating-label-form-group-with-focus label {
-  color: #ff1449;
+  color: #FF1449;
 }
 form .row:first-child .floating-label-form-group {
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #eee;
 }
 .btn {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -328,8 +328,8 @@ form .row:first-child .floating-label-form-group {
 }
 .btn-default:hover,
 .btn-default:focus {
-  background-color: #ff1449;
-  border: 1px solid #ff1449;
+  background-color: #FF1449;
+  border: 1px solid #FF1449;
   color: white;
 }
 .pager {
@@ -349,8 +349,8 @@ form .row:first-child .floating-label-form-group {
 .pager li > a:hover,
 .pager li > a:focus {
   color: white;
-  background-color: #ff1449;
-  border: 1px solid #ff1449;
+  background-color: #FF1449;
+  border: 1px solid #FF1449;
 }
 .pager .disabled > a,
 .pager .disabled > a:hover,
@@ -363,12 +363,12 @@ form .row:first-child .floating-label-form-group {
 ::-moz-selection {
   color: white;
   text-shadow: none;
-  background: #ff1449;
+  background: #FF1449;
 }
 ::selection {
   color: white;
   text-shadow: none;
-  background: #ff1449;
+  background: #FF1449;
 }
 img::selection {
   color: white;
@@ -379,132 +379,5 @@ img::-moz-selection {
   background: transparent;
 }
 body {
-  webkit-tap-highlight-color: #ff1449;
-}
-html,
-body {
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
-  height: 100%;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-p {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-.btn-on {
-  border-color: #ff1449;
-  background-color: #ff1449;
-  color: #FFF;
-}
-.top10 {
-  margin-top: 10px;
-}
-/*.black-dot-background-overlay {
-    background-color: rgba(0, 0, 0,0.45);
-    z-index: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-}*/
-section#home {
-  background: url(/content/images/home-thewall9.jpg) no-repeat center center fixed;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-}
-section#home .wrapper {
-  position: relative;
-  z-index: 1;
-  height: 100%;
-  max-width: 970px;
-  margin: 0 auto;
-  color: #FFF;
-}
-section#home .wrapper:before,
-section#home .wrapper .container {
-  display: inline-block;
-  vertical-align: middle;
-}
-section#home .wrapper:before {
-  /* this is the important part */
-  content: '';
-  display: inline-block;
-  width: 0;
-  height: 100%;
-  vertical-align: middle;
-  /* this just takes care of whitespace added by having display:inline-block (there are other methods) */
-  margin-left: -0.25em;
-}
-section#home .wrapper .container {
-  width: 99%;
-}
-section#home .wrapper .container h1 {
-  font-size: 45px;
-  font-style: italic;
-  text-transform: capitalize;
-}
-section#home .wrapper .container h1 b {
-  font-weight: 800;
-}
-section#home .wrapper .container h2 {
-  font-size: 24px;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 300;
-}
-section#home .wrapper .container a.logo {
-  max-width: 350px;
-  padding-bottom: 25px;
-}
-@media only screen and (max-width: 768px) {
-  section#home .wrapper .container h1 {
-    font-size: 22px;
-  }
-  section#home .wrapper .container h2 {
-    font-size: 20px;
-  }
-  section#home .wrapper .container a.logo {
-    max-width: 250px;
-    padding-bottom: 15px;
-  }
-  section#home .wrapper .container .btn {
-    margin: 10px 0;
-  }
-}
-#work-list a.img {
-  max-width: 128px;
-}
-#work-list p {
-  margin: 5px 0;
-  padding: 5px 0;
-}
-/*TABLET PORTRAIT*/
-@media only screen and (max-width: 767px) {
-  body {
-    padding-top: 50px;
-  }
-  .btn {
-    font-size: 12px;
-    padding: 15px 15px;
-  }
-}
-/*CLEAN BLOG*/
-.btn-tag {
-  font-size: 12px;
-  font-weight: 600;
-  padding: 8px 10px;
-  margin-top: 5px;
-}
-.intro-header {
-  /*TABLET PORTRAIT*/
-}
-.intro-header .post-heading {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-@media only screen and (max-width: 767px) {
-  .intro-header {
-    margin-bottom: 10px;
-  }
+  webkit-tap-highlight-color: #FF1449;
 }

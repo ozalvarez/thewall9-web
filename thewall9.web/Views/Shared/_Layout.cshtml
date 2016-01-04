@@ -13,18 +13,18 @@
     {
         <link rel="alternate" type="application/rss+xml" title="RSS" href="@Html.LinkRss()">
     }
-    <link href='~/content/min/app.css' rel='stylesheet' type='text/css'>
+
+    <link href="~/wwwroot/build/css/vendors.min.css" rel="stylesheet" />
+    <link href="~/wwwroot/build/css/app.min.css" rel="stylesheet" />
+
     <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <script src="~/scripts/min/modernizr.js"></script>
+
+    <script src="~/wwwroot/build/js/modernizr.js"></script>
     @if (!Request.IsLocal)
     {
         <script type="text/javascript" src="https://mylivechat.com/chatinline.aspx?hccid=51184327"></script>
     }
-    @*@foreach (var item in Html.GetLangs())
-        {
-        <link rel="alternate" hreflang="@item.Name" href="@Html.LinkUrl(item)">
-        }*@
 </head>
 <body>
     @Html.GAScript_QAQ()
@@ -75,8 +75,7 @@
             @Html.FindValue(_LayoutContent, "copyright")
         </p>
     </footer>
-    <script src="~/scripts/min/app.js"></script>   
-    @RenderSection("scripts", required: false)
-    
+    <script src="~/wwwroot/build/js/vendors.min.js"></script>
+    @RenderSection("scripts", required: false)   
 </body>
 </html>

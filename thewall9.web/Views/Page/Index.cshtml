@@ -7,7 +7,7 @@
     <div class="wrapper">
         <div class="container">
             <a href="@Html.LinkHome()" class="logo center-block">
-                <img src="@Url.Content("~/Content/images/logo-thewall9.png")" class="img-responsive" alt="thewall9">
+                <img src="@Url.Content("~/wwwroot/build/images/logo-thewall9.png")" class="img-responsive" alt="thewall9">
             </a>
             <h1 class="text-center">
                 @Html.FindValue(Model, "h1")
@@ -26,18 +26,9 @@
     </div>
 </section>
 @section styles{
-    <link href='~/content/min/text-rotator.css' rel='stylesheet' type='text/css'>
+    <link href="~/wwwroot/build/css/home.vendors.min.css" rel="stylesheet" />
 }
 @section scripts{
-    <script src="~/scripts/min/home.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.rotate').textrotator({
-                animation: "dissolve", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
-                separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
-                speed: 7000 // How many milliseconds until the next word show.
-            });
-            //$(document.body).vide("content/video/ocean");
-        });
-    </script>
+    <script src="~/wwwroot/build/js/home.vendors.min.js"></script>
+    <script src="~/wwwroot/build/js/home.min.js"></script>
 }

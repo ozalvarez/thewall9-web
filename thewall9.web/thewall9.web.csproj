@@ -122,54 +122,36 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Readme\Elmah.txt" />
-    <Content Include="content\clean-blog\clean-blog.css">
+    <Content Include="wwwroot\build\css\app.min.css" />
+    <Content Include="wwwroot\build\css\home.vendors.min.css" />
+    <Content Include="wwwroot\build\css\vendors.min.css" />
+    <Content Include="wwwroot\build\fonts\fontawesome-webfont.svg" />
+    <Content Include="wwwroot\build\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="wwwroot\build\js\home.min.js" />
+    <Content Include="wwwroot\build\js\home.vendors.min.js" />
+    <Content Include="wwwroot\build\js\modernizr.js" />
+    <Content Include="wwwroot\build\js\vendors.min.js" />
+    <Content Include="wwwroot\src\css\clean-blog\clean-blog.css">
       <DependentUpon>clean-blog.less</DependentUpon>
     </Content>
-    <Content Include="content\clean-blog\clean-blog.min.css">
-      <DependentUpon>clean-blog.css</DependentUpon>
-    </Content>
-    <Content Include="content\fonts\fontawesome-webfont.svg" />
-    <Content Include="content\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="content\images\home-thewall9.jpg" />
-    <Content Include="content\images\logo-thewall9.png" />
-    <Content Include="content\min\app.css" />
-    <Content Include="content\min\text-rotator.css" />
-    <Content Include="content\simpletextrotator.css" />
-    <Content Include="content\site.css">
-      <DependentUpon>site.less</DependentUpon>
-    </Content>
-    <Content Include="content\site.min.css">
-      <DependentUpon>site.css</DependentUpon>
-    </Content>
+    <Content Include="wwwroot\build\images\home-thewall9.jpg" />
+    <Content Include="wwwroot\build\images\logo-thewall9.png" />
+    <Content Include="wwwroot\src\css\simpletextrotator.css" />
     <Content Include="Gruntfile.js" />
     <Content Include="bower.json" />
     <Content Include="package.json" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="content\fonts\fontawesome-webfont.eot" />
-    <Content Include="content\fonts\fontawesome-webfont.ttf" />
-    <Content Include="content\fonts\fontawesome-webfont.woff" />
-    <Content Include="content\fonts\fontawesome-webfont.woff2" />
-    <Content Include="content\fonts\FontAwesome.otf" />
-    <Content Include="content\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="content\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="content\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="content\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="content\clean-blog\clean-blog.less" />
-    <Content Include="content\clean-blog\mixins.less" />
-    <Content Include="content\clean-blog\variables.less" />
-    <Content Include="content\site.less" />
+    <Content Include="wwwroot\src\css\clean-blog\clean-blog.less" />
+    <Content Include="wwwroot\src\css\clean-blog\mixins.less" />
+    <Content Include="wwwroot\src\css\clean-blog\variables.less" />
+    <Content Include="wwwroot\src\css\app.less" />
     <None Include="Properties\PublishProfiles\thewall9 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\thewall9.pubxml" />
     <Content Include="robots.txt" />
-    <Content Include="scripts\app\home.js" />
-    <Content Include="scripts\grained.min.js" />
-    <Content Include="scripts\jquery.simple-text-rotator.min.js" />
-    <Content Include="scripts\min\app.js" />
-    <Content Include="scripts\min\home.js" />
-    <Content Include="scripts\min\modernizr.js" />
-    <Content Include="scripts\min\text-rotator.js" />
+    <Content Include="wwwroot\src\js\grained.min.js" />
+    <Content Include="wwwroot\src\js\home.js" />
+    <Content Include="wwwroot\src\js\jquery.simple-text-rotator.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -190,15 +172,21 @@
     <Content Include="Views\Blog\Detail.cshtml" />
     <Content Include="Views\Blog\Index.cshtml" />
     <Content Include="SITE.json" />
+    <Content Include="wwwroot\build\fonts\fontawesome-webfont.eot" />
+    <Content Include="wwwroot\build\fonts\fontawesome-webfont.ttf" />
+    <Content Include="wwwroot\build\fonts\fontawesome-webfont.woff" />
+    <Content Include="wwwroot\build\fonts\fontawesome-webfont.woff2" />
+    <Content Include="wwwroot\build\fonts\FontAwesome.otf" />
+    <Content Include="wwwroot\build\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="wwwroot\build\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="wwwroot\build\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="wwwroot\build\fonts\glyphicons-halflings-regular.woff2" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="App_Start\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\thewall9-CMS\thewall9.data.binding\thewall9.data.binding.csproj">
