@@ -1,5 +1,5 @@
 ﻿@model thewall9.data.binding.PageWeb
-<section id="work">
+<section id="works">
     <header class="intro-header" style="background-image: url('@Html.FindValue(Model, "header")')">
         <div class="container">
             <div class="row">
@@ -13,7 +13,7 @@
             </div>
         </div>
     </header>
-    <div id="work-list2">
+    <div id="work-list">
         <div class="container-fluid">
             <div class="row">
                 @{int _Cont = 0;}
@@ -21,7 +21,7 @@
                 {
                     <div class="col-md-4 col">
                         <div class="bg" style="background-image:url('@Html.FindValue(item, "work-img")')">
-                            <a href="@Html.FindValue(item, "work-link-url")" target="_blank" class="center-block img" >
+                            <a href="@Html.FindValue(item, "work-link-url")" class="center-block img" >
                                 @*<img src="" class="img-responsive img-rounded" alt="@Html.FindValue(item, "work-name")" />*@
 
                                 <h2 class="text-center">
@@ -33,12 +33,6 @@
 
                             </a>
                         </div>
-                        @*<div class="text-center small">
-                                <a href="@Html.FindValue(item, "work-link-url")" target="_blank">
-                                    <span class="glyphicon glyphicon-link"></span>
-                                    @Html.FindValue(item, "work-link-text")
-                                </a>
-                            </div>*@
                     </div>
                     if (_Cont % 3 == 2)
                     {
@@ -53,7 +47,5 @@
                 @Html.FindValue(Model, "contact-btn-text")
             </a>
         </div>
-
     </div>
-
 </section>
