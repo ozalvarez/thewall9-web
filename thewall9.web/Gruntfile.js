@@ -50,11 +50,19 @@ module.exports = function (grunt) {
                     ]
                 }
             },
+            app: {
+                files: {
+                    'wwwroot/build/js/app.min.js': [
+                            'wwwroot/src/js/app.js'
+                    ]
+                }
+            },
             home_vendors: {
                 files: {
                     'wwwroot/build/js/home.vendors.min.js': [
                         'wwwroot/src/js/jquery.simple-text-rotator.min.js',
-                        'wwwroot/src/js/grained.min.js'
+                            'wwwroot/src/js/grained.min.js'
+                        
                     ]
                 }
             },
@@ -83,6 +91,10 @@ module.exports = function (grunt) {
             css: {
                 files: ['wwwroot/src/css/*.less'],
                 tasks: ['less:app', 'postcss', 'cssmin:app']
+            },
+            app: {
+                files: ['wwwroot/src/js/app.js'],
+                tasks: ['uglify:app']
             },
             js: {
                 files: ['wwwroot/src/js/home.js'],
