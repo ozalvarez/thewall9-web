@@ -52,8 +52,8 @@
       <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\thewall9-CMS\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\thewall9-CMS\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -70,8 +70,8 @@
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <HintPath>..\..\thewall9-CMS\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\thewall9-CMS\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
@@ -127,6 +127,7 @@
     <Content Include="wwwroot\build\css\vendors.min.css" />
     <Content Include="wwwroot\build\fonts\fontawesome-webfont.svg" />
     <Content Include="wwwroot\build\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="wwwroot\build\js\app.min.js" />
     <Content Include="wwwroot\build\js\home.min.js" />
     <Content Include="wwwroot\build\js\home.vendors.min.js" />
     <Content Include="wwwroot\build\js\modernizr.js" />
@@ -150,6 +151,7 @@
     <None Include="Properties\PublishProfiles\thewall9.pubxml" />
     <Content Include="robots.txt" />
     <Content Include="wwwroot\src\js\grained.min.js" />
+    <Content Include="wwwroot\src\js\app.js" />
     <Content Include="wwwroot\src\js\home.js" />
     <Content Include="wwwroot\src\js\jquery.simple-text-rotator.min.js" />
     <Content Include="Web.config" />
@@ -158,6 +160,7 @@
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
