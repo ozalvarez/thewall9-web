@@ -127,6 +127,7 @@
     <Content Include="wwwroot\build\css\vendors.min.css" />
     <Content Include="wwwroot\build\fonts\fontawesome-webfont.svg" />
     <Content Include="wwwroot\build\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="wwwroot\build\images\isotipo.png" />
     <Content Include="wwwroot\build\js\app.min.js" />
     <Content Include="wwwroot\build\js\home.min.js" />
     <Content Include="wwwroot\build\js\home.vendors.min.js" />

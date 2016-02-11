@@ -89,7 +89,7 @@ module.exports = function (grunt) {
         },
         watch: {
             css: {
-                files: ['wwwroot/src/css/*.less'],
+                files: ['wwwroot/src/css/*.less', 'wwwroot/src/css/*/*.less'],
                 tasks: ['less:app', 'postcss', 'cssmin:app']
             },
             app: {
