@@ -12,10 +12,15 @@ html, body {
 h1, h2, h3, h4, h5 {
     .font-heading;
 }
+
+h2 {
+    font-size: 40px;
+}
+
 .wrapper {
     display: table;
     height: 100vh;
-    width:100%;
+    width: 100%;
 
     .wrapper-container {
         display: table-cell;
@@ -32,8 +37,30 @@ h1, h2, h3, h4, h5 {
         }
     }
 }
-.fix-header{
-    margin-top:@header-height;
+
+.fix-header {
+    margin-top: @header-height;
 }
 
+i.separator {
+    width: 30px;
+    height: 2px;
+    background-color: @brand-primary;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    &.separator-block {
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    &.separator-white {
+        background-color: @white;
+    }
+}
+
+
 @import 'sections/home.less';
+@import 'sections/works.less';

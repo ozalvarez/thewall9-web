@@ -27,7 +27,7 @@
     NAVBAR
 */
 .navbar-custom {
-  background-color: rgba(24, 24, 32, 0.9);
+  background-color: rgba(24, 24, 32, 0.8);
   border-color: transparent;
 }
 .navbar-custom .navbar-text {
@@ -38,6 +38,8 @@
 }
 .navbar-custom .navbar-nav > li > a {
   text-transform: uppercase;
+  font-size: larger;
+  font-weight: lighter;
   color: #FFFFFF;
   font-family: 'Roboto', sans-serif;
 }
@@ -126,6 +128,9 @@ h4,
 h5 {
   font-family: 'Arapey', serif;
 }
+h2 {
+  font-size: 40px;
+}
 .wrapper {
   display: table;
   height: 100vh;
@@ -148,22 +153,98 @@ h5 {
 .fix-header {
   margin-top: 100px;
 }
-#landing {
+i.separator {
+  width: 30px;
+  height: 2px;
+  background-color: #FF1449;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+i.separator.separator-block {
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+i.separator.separator-white {
+  background-color: #FFFFFF;
+}
+#home #landing {
   background-repeat: repeat;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
   color: #FFFFFF;
 }
-#landing h1 {
+#home #landing h1 {
   font-size: 60px;
 }
-#landing h2 {
+#home #landing h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: lighter;
   font-size: 18px;
   text-transform: uppercase;
 }
-#landing .btn {
+#home #landing .btn {
   margin-top: 20px;
+}
+#home #some-text {
+  background-color: #e6e6e6;
+  text-align: center;
+  font-family: 'Arapey', serif;
+  font-size: 26px;
+}
+#home #some-text .container {
+  padding: 40px;
+}
+#home #services {
+  position: relative;
+  color: #FFFFFF;
+}
+#home #services #services-canvas {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -999;
+}
+#home #services .service .icon {
+  display: block;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  padding: 40px;
+  margin: 0 auto;
+}
+#home #services .service .icon svg {
+  fill: #FF1449;
+  width: 120px;
+  height: 120px;
+}
+#home #services .service .icon:hover {
+  background-color: transparent;
+  border: 2px solid #FFFFFF;
+}
+#home #services .service .icon:hover svg {
+  fill: #FFFFFF;
+}
+#home #services .service p {
+  margin-top: 15px;
+  text-align: center;
+}
+#home #services .service p a {
+  font-size: 24px;
+  font-family: 'Arapey', serif;
+  color: #FFFFFF;
+}
+.works .theplayer9 {
+  background-color: #FFFFFF;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: -150px;
+  padding: 20px 80px;
 }
