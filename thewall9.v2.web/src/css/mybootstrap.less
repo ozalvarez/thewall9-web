@@ -1,0 +1,195 @@
+﻿@import 'variables.less';
+/*
+    BTN
+*/
+.btn {
+   // font-size: 26px;
+    //font-weight: lighter;
+    border-radius: 2px;
+    text-transform: uppercase;
+
+    &.btn-primary {
+        background-color: @brand-primary;
+        border: 1px solid @brand-primary;
+        color: @white;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: @brand-primary-faded;
+            border: 1px solid @brand-primary-faded;
+            color: @white;
+        }
+    }
+
+    &.btn-default {
+        color: @brand-primary;
+    }
+
+    /*@media only screen and (max-width : 768px) {
+        font-size: 20px;
+    }*/
+}
+/*
+    NAVBAR
+*/
+@bgDefault: transparent;
+@bgHighlight: transparent;
+@colDefault: @white;
+@colHighlight: @brand-primary-faded;
+@colMobile: @black;
+@dropDown: false;
+
+.ddm() when (@dropDown) {
+    > li > .dropdown-menu {
+        background-color: @bgDefault;
+
+        > li {
+            > a {
+                color: @colDefault;
+
+                &:hover, &:focus {
+                    background-color: @bgHighlight;
+                    color: @colHighlight;
+                }
+            }
+
+            > .divider {
+                background-color: @bgHighlight;
+            }
+        }
+    }
+
+    .open .dropdown-menu > .active {
+        > a, > a:hover, > a:focus {
+            color: @colHighlight;
+            background-color: @bgHighlight;
+        }
+    }
+}
+
+.navbar-custom {
+    background-color: @black-faded;
+    border-color: @bgHighlight;
+
+    .navbar-text {
+        color: @colDefault;
+    }
+
+    .navbar-nav {
+        min-height: @header-height;
+
+        > li {
+            > a {
+                text-transform:uppercase;
+                color: @white;
+                font-family: @font-body;
+
+                &:hover, &:focus {
+                    color: @white-faded;
+                    background-color: transparent;
+                }
+            }
+        }
+
+        .ddm;
+
+        > .active {
+            > a, > a:hover, > a:focus {
+                color: @colHighlight;
+                background-color: @bgHighlight;
+            }
+        }
+
+        > .open {
+            > a, > a:hover, > a:focus {
+                color: @colHighlight;
+                background-color: @bgHighlight;
+            }
+        }
+    }
+
+    .navbar-toggle {
+        border-color: @bgHighlight;
+
+        &:hover, &:focus {
+            background-color: @bgHighlight;
+        }
+
+        .icon-bar {
+            background-color: @colDefault;
+        }
+    }
+
+    .navbar-collapse,
+    .navbar-form {
+        border-color: @colDefault;
+    }
+
+    .navbar-link {
+        color: @colDefault;
+
+        &:hover {
+            color: @colHighlight;
+        }
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    .navbar-custom {
+        .navbar-header {
+            .navbar-brand {
+                height: auto;
+                padding: 23px 0;
+            }
+
+            img.logo {
+                max-width: 250px;
+            }
+        }
+
+        .navbar-nav {
+            min-height: @header-height;
+
+            > li {
+                > a {
+                    padding-bottom: (@header-height/2 - 10);
+                    padding-top: (@header-height/2 - 10);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: @screen-xs-max) {
+    .navbar-custom {
+        .navbar-brand {
+            padding: 5px;
+
+            img {
+                height: 35px;
+            }
+        }
+
+        .navbar-header {
+            background-color: @colMobile;
+        }
+
+        .navbar-nav {
+            > li {
+                > a {
+                    &:hover, &:focus {
+                        color: @white;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+
+        .navbar-collapse {
+            li {
+                background-color: @colMobile;
+            }
+        }
+    }
+}
