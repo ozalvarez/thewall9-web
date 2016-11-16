@@ -17,6 +17,17 @@ h2 {
     font-size: 40px;
 }
 
+a {
+    transition: .5s;
+    color: @white;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: @brand-primary;
+    }
+}
+
 .wrapper {
     display: table;
     height: 100vh;
@@ -61,6 +72,27 @@ i.separator {
     }
 }
 
+.subtitle {
+    text-transform: uppercase;
+}
 
+.row-no-margin {
+    &.row {
+        margin-left: 0;
+        margin-right: 0;
+
+        .col-md-4 {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .col-md-3 {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+@import 'sections/layout.less';
 @import 'sections/home.less';
 @import 'sections/works.less';

@@ -2,13 +2,54 @@
 @import '../mixins.less';
 @import '../keyframes.less';
 
-.works {
-    .theplayer9 {
-        background-color: @white;
-        text-align: center;
-        width: 50%;
-        margin: 0 auto;
-        margin-top: -150px;
-        padding: 20px 80px;
+#theplayer9 {
+    background-color: @white;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: -150px;
+    padding: 20px 80px;
+}
+
+#works {
+    .work {
+        position: relative;
+
+        a.icon {
+            .hover {
+                position: absolute;
+                width: 90%;
+                height: 90%;
+                top: 5%;
+                left: 5%;
+                background: @brand-primary-faded;
+                opacity: 0;
+                color: @white;
+                transition: opacity .4s ease-out;
+
+                .info {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 10px;
+
+                    .title {
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        font-size: larger;
+                    }
+
+                    .subtitle {
+                        text-transform: none;
+                        font-weight: lighter;
+                    }
+                }
+            }
+
+            &:hover {
+                .hover {
+                    opacity: 1;
+                }
+            }
+        }
     }
 }

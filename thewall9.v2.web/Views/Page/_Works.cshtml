@@ -1,6 +1,6 @@
 ﻿@model thewall9.data.binding.ContentBindingList
 @{
-    var _ThePlayer9 = Html.Find(Model, "theplayer9");
+
 }
 @section styles{
 
@@ -8,20 +8,35 @@
 @section scripts{
 
 }
-<section class="works">
-    <div class="theplayer9">
-        <h2>@Html.FindValue(_ThePlayer9, "title")</h2>
-        <p>@Html.FindValue(_ThePlayer9, "subtitle")</p>
+<section id="works">
+    <div class="container text-center">
+        <h2>@Html.FindValue(Model, "title")</h2>
+        <p class="subtitle">@Html.FindValue(Model, "subtitle")</p>
         <i class="separator separator-block"></i>
-        <p>
-            <a href="@Html.FindValue(_ThePlayer9, "url")">
-                <img src="@Html.FindValue(_ThePlayer9, "img")" class="img-responsive" />
-            </a>
-        </p>
     </div>
-    <div id="some-text">
-        <div class="container">
-            @Html.FindValue(Model, "some-text")
-        </div>
+    <div class="row row-no-margin">
+        @foreach (var item in Html.FindItems(Model, "list"))
+            {
+            <div class="col-md-3 work">
+                <a class="icon" href="@Html.FindValue(item, "work-link-url")">
+                    <img src="@Html.FindValue(item, "work-img")" class="img-responsive" />
+                    <div class="hover">
+                        <div class="info">
+                            <div class="title">
+                                @Html.FindValue(item, "work-name")
+                            </div>
+                            <div class="subtitle">
+                                @Html.FindValue(item, "work-description")
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
     </div>
+    @*<p class="text-center all">
+        <a href="@Html.FindValue(Model, "more-services-btn-url")" class="btn btn-dark btn-lg">
+            @Html.FindValue(Model, "more-services-btn-text")
+        </a>
+    </p>*@
 </section>

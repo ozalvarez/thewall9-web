@@ -40,7 +40,7 @@
     #services {
         position: relative;
         color: @white;
-        
+
         #services-canvas {
             position: absolute;
             display: block;
@@ -51,41 +51,48 @@
             z-index: -999;
         }
 
-        .service {
-            .icon {
-                display: block;
-                background-color: @white;
-                border-radius: 50%;
-                width: 200px;
-                height: 200px;
-                padding: 40px;
-                margin:0 auto;
-
-                svg {
-                    fill: @brand-primary;
-                    width: 120px;
-                    height: 120px;
-                }
-
-                &:hover {
-                    background-color: transparent;
-                    border: 2px solid @white;
+        .row {
+            .service {
+                .icon {
+                    display: block;
+                    background-color: @white;
+                    border-radius: 50%;
+                    width: 200px;
+                    height: 200px;
+                    padding: 40px;
+                    margin: 0 auto;
 
                     svg {
-                        fill: @white;
+                        fill: @brand-primary;
+                        width: 120px;
+                        height: 120px;
+                    }
+
+                    &:hover {
+                        background-color: transparent;
+                        border: 2px solid @white;
+
+                        svg {
+                            fill: @white;
+                        }
+                    }
+                }
+
+                p {
+                    margin-top: 15px;
+                    text-align: center;
+
+                    a {
+                        font-size: 24px;
+                        .font-heading;
+                        color: @white;
                     }
                 }
             }
+        }
 
-            p {
-                margin-top: 15px;
-                text-align:center;
-                a {
-                    font-size: 24px;
-                    .font-heading;
-                    color: @white;
-                }
-            }
+        p.all {
+            margin: 25px;
         }
     }
 }

@@ -12,7 +12,7 @@
     <canvas id="services-canvas"></canvas>
     <div class="container">
         <h2>@Html.FindValue(Model, "title")</h2>
-        <p>@Html.FindValue(Model, "subtitle")</p>
+        <p class="subtitle">@Html.FindValue(Model, "subtitle")</p>
         <i class="separator separator-white"></i>
         <div class="row">
             @foreach (var item in Html.FindItems(Model, "services-list"))
@@ -30,6 +30,10 @@
                 </div>
             }
         </div>
-
+        <p class="text-center all">
+            <a href="@Html.FindValue(Model, "more-services-btn-url")" class="btn btn-dark btn-lg">
+                @Html.FindValue(Model, "more-services-btn-text")
+            </a>
+        </p>
     </div>
 </section>

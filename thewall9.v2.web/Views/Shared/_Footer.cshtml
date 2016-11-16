@@ -1,0 +1,90 @@
+﻿@{
+    var _Menu = Html.GetSite().OtherPages;
+    var _LayoutContent = Html.GetSite().ContentLayout;
+    var _Footer = Html.Find(_LayoutContent, "footer");
+}
+<footer id="footer" style="background-image:url(@Html.FindValue(_Footer, "bg")">
+    <div class="text-center intro">
+        <img class="iso" src="@Html.FindValue(_LayoutContent, "logo-iso")" />
+        <p class="title">@Html.FindValue(_Footer, "title")</p>
+        <p class="subtitle">@Html.FindValue(_Footer, "subtitle")</p>
+        <a class="btn btn-lg btn-primary" href="@Html.FindValue(_Footer, "contact-btn-url")">
+            @Html.FindValue(_Footer, "contact-btn-text")
+        </a>
+    </div>
+    <ul class="list-inline social">
+        <li>
+            <a href="@Html.LinkFacebook()" target="_blank">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li>
+            <a href="@Html.LinkInstagram()" target="_blank">
+                <i class="fa fa-instagram"></i>
+
+            </a>
+        </li>
+        <li>
+            <a href="@Html.LinkTwitter()" target="_blank">
+                <i class="fa fa-twitter-square"></i>
+            </a>
+        </li>
+    </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 office-info">
+                <div class="our-office">@Html.FindValue(_Footer, "our-office")</div>
+                <div class="address">@Html.FindValue(_Footer, "address")</div>
+                <div class="phone">@Html.FindValue(_Footer, "phone")</div>
+                <div class="email">
+                    @Html.FindValue(_Footer, "email")
+                </div>
+            </div>
+            <div class="col-md-7 text-right">
+                <ul class="list-inline menu">
+                    @foreach (var item in _Menu)
+            {
+                        <li>
+                            <a href="@(!string.IsNullOrEmpty(item.RedirectUrl)
+                    ? item.RedirectUrl
+                        :"/"+ item.FriendlyUrl)"
+                               @(string.IsNullOrEmpty(item.RedirectUrl) ? "" : "target='_blank'")>
+                                @item.Name
+                            </a>
+                        </li>
+                    }
+                </ul>
+                <ul class="list-inline lang">
+                    @foreach (var item in Html.GetLangs())
+            {
+                        <li>
+                            <a href="@Html.LinkUrl(item)">
+                                @Html.FindValue(_Footer, item.Name)
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <hr />
+        <img class="pull-left iso-small" src="@Html.FindValue(_LayoutContent, "logo-iso")" />
+        <div class="pull-left last">
+            <div>
+                @Html.FindValue(_Footer, "copyright")
+            </div>
+            <div>
+                @foreach (var item in @Html.FindItems(_Footer, "link-list"))
+                {
+                    <span>
+                        <a href="@Html.FindValue(item, "link-url")">
+                            @Html.FindValue(item, "link-text")
+                        </a>
+                    </span>
+                    
+                }
+            </div>
+        </div>
+        <div class="clear-fix"></div>
+        
+    </div>
+</footer>

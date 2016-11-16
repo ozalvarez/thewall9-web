@@ -124,8 +124,6 @@
     <Content Include="Global.asax" />
     <Content Include="robots.txt" />
     <Content Include="package.json" />
-    <Content Include="src\svg\icons-01.svg" />
-    <Content Include="src\svg\icons-02.svg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -182,7 +180,7 @@
     <Content Include="src\css\sections\home.less" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Page\_Works.cshtml" />
+    <Content Include="Views\Page\_ThePlayer9.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="src\css\sections\works.less" />
@@ -191,7 +189,7 @@
     <Content Include="Views\Page\_Services.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="src\svg\icons.ai" />
+    <Content Include="Views\Page\_Works.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -212,7 +210,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:4557/</IISUrl>
+          <IISUrl>http://localhost:7900/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

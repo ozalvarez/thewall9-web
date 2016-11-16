@@ -20,6 +20,18 @@
   border: 1px solid rgba(255, 20, 73, 0.8);
   color: #FFFFFF;
 }
+.btn.btn-dark {
+  background-color: #181820;
+  border: 1px solid #181820;
+  color: #FFFFFF;
+}
+.btn.btn-dark:hover,
+.btn.btn-dark:focus,
+.btn.btn-dark:active {
+  background-color: rgba(24, 24, 32, 0.9);
+  border: 1px solid rgba(24, 24, 32, 0.9);
+  color: #FFFFFF;
+}
 .btn.btn-default {
   color: #FF1449;
 }
@@ -131,6 +143,15 @@ h5 {
 h2 {
   font-size: 40px;
 }
+a {
+  transition: .5s;
+  color: #FFFFFF;
+}
+a:hover,
+a:focus,
+a:active {
+  color: #FF1449;
+}
 .wrapper {
   display: table;
   height: 100vh;
@@ -168,6 +189,75 @@ i.separator.separator-block {
 }
 i.separator.separator-white {
   background-color: #FFFFFF;
+}
+.subtitle {
+  text-transform: uppercase;
+}
+.row-no-margin.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.row-no-margin.row .col-md-4 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.row-no-margin.row .col-md-3 {
+  padding-left: 0;
+  padding-right: 0;
+}
+#footer {
+  background-repeat: repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #FFFFFF;
+}
+#footer .intro img.iso {
+  margin: 40px;
+  width: 100px;
+}
+#footer .intro .title {
+  font-family: 'Arapey', serif;
+  font-size: 34px;
+}
+#footer .intro .subtitle {
+  max-width: 400px;
+  margin: 0 auto;
+  color: #9b9b9b;
+}
+#footer .intro a.btn {
+  margin: 30px;
+}
+#footer .social {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+#footer .office-info {
+  text-transform: uppercase;
+}
+#footer .office-info .our-office {
+  color: #9b9b9b;
+}
+#footer .office-info .email {
+  color: #FF1449;
+}
+#footer .menu,
+#footer .lang {
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+#footer .iso-small {
+  max-width: 40px;
+  margin-right: 10px;
+}
+#footer .last {
+  text-transform: uppercase;
+  color: #9b9b9b;
+}
+#footer .last span {
+  margin-right: 10px;
+  font-size: smaller;
 }
 #home #landing {
   background-repeat: repeat;
@@ -210,7 +300,7 @@ i.separator.separator-white {
   right: 0;
   z-index: -999;
 }
-#home #services .service .icon {
+#home #services .row .service .icon {
   display: block;
   background-color: #FFFFFF;
   border-radius: 50%;
@@ -219,32 +309,66 @@ i.separator.separator-white {
   padding: 40px;
   margin: 0 auto;
 }
-#home #services .service .icon svg {
+#home #services .row .service .icon svg {
   fill: #FF1449;
   width: 120px;
   height: 120px;
 }
-#home #services .service .icon:hover {
+#home #services .row .service .icon:hover {
   background-color: transparent;
   border: 2px solid #FFFFFF;
 }
-#home #services .service .icon:hover svg {
+#home #services .row .service .icon:hover svg {
   fill: #FFFFFF;
 }
-#home #services .service p {
+#home #services .row .service p {
   margin-top: 15px;
   text-align: center;
 }
-#home #services .service p a {
+#home #services .row .service p a {
   font-size: 24px;
   font-family: 'Arapey', serif;
   color: #FFFFFF;
 }
-.works .theplayer9 {
+#home #services p.all {
+  margin: 25px;
+}
+#theplayer9 {
   background-color: #FFFFFF;
   text-align: center;
   width: 50%;
   margin: 0 auto;
   margin-top: -150px;
   padding: 20px 80px;
+}
+#works .work {
+  position: relative;
+}
+#works .work a.icon .hover {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 5%;
+  left: 5%;
+  background: rgba(255, 20, 73, 0.8);
+  opacity: 0;
+  color: #FFFFFF;
+  transition: opacity 0.4s ease-out;
+}
+#works .work a.icon .hover .info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+#works .work a.icon .hover .info .title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: larger;
+}
+#works .work a.icon .hover .info .subtitle {
+  text-transform: none;
+  font-weight: lighter;
+}
+#works .work a.icon:hover .hover {
+  opacity: 1;
 }
