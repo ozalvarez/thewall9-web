@@ -148,7 +148,7 @@
     <Content Include="wwwroot\src\css\clean-blog\mixins.less" />
     <Content Include="wwwroot\src\css\clean-blog\variables.less" />
     <Content Include="wwwroot\src\css\app.less" />
-    <None Include="Properties\PublishProfiles\thewall9 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\thewall9-com - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\thewall9.pubxml" />
     <Content Include="robots.txt" />
     <Content Include="wwwroot\src\js\grained.min.js" />
