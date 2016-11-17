@@ -1,0 +1,89 @@
+﻿@model thewall9.data.binding.BlogListWeb
+@{
+    var _Content = ViewBag.BlogContent as thewall9.data.binding.ContentBindingList;
+    var _Header = Html.Find(_Content, "header");
+}
+<section id="blog">
+    <div class="header-page" style="background-image:url(@Html.FindValue(_Header,"bg")">
+        <div class="container">
+            <h1>
+                @Html.FindValue(_Header, "h1")
+            </h1>
+            <i class="separator separator-block"></i>
+            <h2>
+                @if (ViewBag.BlogTagName != null)
+                {
+                    <text>@ViewBag.BlogTagName</text>
+                }
+                else if (ViewBag.BlogCategoryFriendlyUrl != null)
+                {
+                    <text>@ViewBag.BlogCategoryFriendlyUrl </text>
+                }
+                else
+                {
+                    @Html.FindValue(_Header, "h2")
+                }
+            </h2>
+
+        </div>
+    </div>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                @foreach (var item in Model.Data)
+                {
+                    <div class="post-preview">
+                        @if (!string.IsNullOrEmpty(item.FeatureImageUrl))
+                        {
+                            <a href="@Url.Action("detail", "blog", new { BlogPostID = item.BlogPostID, FriendlyUrl = item.FriendlyUrl })">
+                                <img src="@item.FeatureImageUrl" class="img-responsive" />
+                            </a>
+                        }
+                        <a href="@Url.Action("detail", "blog", new { BlogPostID = item.BlogPostID, FriendlyUrl = item.FriendlyUrl })">
+                            <h2 class="post-title">
+                                @Html.DisplayFor(modelItem => item.Title)
+                            </h2>
+                            <h3 class="post-subtitle">
+                                @Html.DisplayFor(modelItem => item.ContentPreview)
+                            </h3>
+                        </a>
+                        <p class="post-meta">Creado el @String.Format("{0:f}", item.DateCreated)</p>
+                    </div>
+                    <hr>
+                }
+                <div id="post-footer">
+                    <!-- Pager -->
+                    @if (ViewBag.BlogTagName != null)
+                    {
+                        @Html.PageLinks((int?)ViewBag.Page ?? 1, Model.Pages, i => Url.Action("tag", "blog", new { Page = i, BlogTagName = ViewBag.BlogTagName }))
+                    }
+                    else
+                    {
+                        @Html.PageLinks((int?)ViewBag.Page ?? 1, Model.Pages, i => Url.Action("index", "blog", new { Page = i, BlogCategoryFriendlyUrl = ViewBag.BlogCategoryFriendlyUrl }))
+                    }
+                    @if (Model.Tags != null && Model.Tags.Count > 0)
+                    {
+                        <h4 class="text-center">TAGS</h4>
+                        foreach (var item in Model.Tags)
+                        {
+                            <a href="@Url.Action("tag", "blog", new { BlogTagName = item.BlogTagName })" class="btn btn-default btn-tag">
+                                @item.BlogTagName
+                            </a>
+                        }
+                    }
+                    @if (Model.Categories != null && Model.Categories.Count > 0)
+                    {
+                        <h4 class="text-center">CATEGORÍAS</h4>
+                        foreach (var item in Model.Categories)
+                        {
+                            <a href="@Url.Action("index", "blog", new { BlogCategoryFriendlyUrl = item.FriendlyUrl })" class="btn btn-default btn-tag">
+                                @item.BlogCategoryName
+                            </a>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,62 @@
+﻿@import '../variables.less';
+@import '../mixins.less';
+@import '../keyframes.less';
+
+#theplayer9 {
+    background-color: @white;
+    text-align: center;
+    padding: 20px 80px 40px 80px;
+
+    @media only screen and (max-width : @screen-sm-max) {
+        padding: 5px;
+    }
+}
+
+#works {
+    #theplayer9 {
+        background: radial-gradient(circle, #fff, #d7d7d7);
+    }
+}
+
+.works {
+    .work {
+        position: relative;
+
+        a.icon {
+            .hover {
+                position: absolute;
+                width: 90%;
+                height: 90%;
+                top: 5%;
+                left: 5%;
+                background: @brand-primary-faded;
+                opacity: 0;
+                color: @white;
+                transition: opacity .4s ease-out;
+
+                .info {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 10px;
+
+                    .title {
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        font-size: larger;
+                    }
+
+                    .subtitle {
+                        text-transform: none;
+                        font-weight: lighter;
+                    }
+                }
+            }
+
+            &:hover {
+                .hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

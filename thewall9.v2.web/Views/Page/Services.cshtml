@@ -1,0 +1,38 @@
+﻿@model thewall9.data.binding.PageWeb
+@{
+    var _S = Html.FindItems(Model, "services-list");
+}
+@section styles{
+
+}
+@section scripts{
+
+}
+<section id="services" class="services">
+    @Html.Partial("_HeaderPage", Model)
+    <div class="container content">
+        <div class="row">
+            @foreach (var item in _S)
+            {
+                <div class="col-md-3 col-sm-6 service">
+                    <div class="icon">
+                        @Html.Raw(Html.FindValue(item, "icon-svg"))
+                    </div>
+                    <p>
+                        <span class="title">
+                            @Html.FindValue(item, "title")
+                        </span>
+                    </p>
+                    <ul class="service-info">
+                        @foreach (var item2 in Html.FindItems(item, "list", true))
+                        {
+                            <li>
+                                @Html.GetValue(item2)
+                            </li>
+                        }
+                    </ul>
+                </div>
+            }
+        </div>
+    </div>
+</section>

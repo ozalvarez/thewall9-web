@@ -1,0 +1,105 @@
+﻿@import '../variables.less';
+@import '../mixins.less';
+@import '../keyframes.less';
+
+#services {
+    background: radial-gradient(circle, #fff, #d7d7d7);
+
+    .content {
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+
+    .service {
+        .icon {
+            background-color: transparent;
+            border: 0px solid @brand-primary;
+            border-radius: 100%;
+            padding: 0 20px;
+
+            svg {
+                fill: @black;
+                width: 180px;
+                height: 180px;
+            }
+
+            &:hover {
+                border: 0px solid @brand-primary;
+
+                svg {
+                    fill: @black;
+                }
+            }
+        }
+
+        .service-info {
+            font-size: 14px;
+
+            li {
+                padding: 5px 0;
+            }
+        }
+    }
+}
+
+.services {
+    position: relative;
+
+    #services-canvas {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: -999;
+    }
+
+    .row {
+        .service {
+            .icon {
+                display: block;
+                background-color: @white;
+                border-radius: 50%;
+                width: 200px;
+                height: 200px;
+                padding: 40px;
+                margin: 0 auto;
+
+                svg {
+                    fill: @brand-primary;
+                    width: 120px;
+                    height: 120px;
+                }
+
+                &:hover {
+                    background-color: transparent;
+
+                    svg {
+                        fill: @white;
+                    }
+                }
+            }
+
+            p {
+                margin-top: 15px;
+                text-align: center;
+
+                a.title {
+                    &:hover {
+                        color: @black;
+                    }
+                }
+
+                .title {
+                    font-size: 24px;
+                    .font-heading;
+                }
+            }
+        }
+    }
+
+    p.all {
+        margin: 25px;
+    }
+}

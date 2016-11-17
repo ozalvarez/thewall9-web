@@ -1,0 +1,41 @@
+﻿@{
+    var _Menu = Html.GetMenu();
+    var _LayoutContent = Html.GetSite().ContentLayout;
+}
+<nav class="navbar navbar-custom navbar-fixed-top top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand visible-xs" href="~/">
+                <img src="@Html.FindValue(_LayoutContent, "logo-iso")" />
+            </a>
+            <a class="navbar-brand hidden-xs" href="~/">
+                <img src="@Html.FindValue(_LayoutContent, "logo")" class="logo" />
+            </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right" id="menu">
+                @foreach (var item in _Menu)
+                {
+                    <li>
+                        <a href="/@item.FriendlyUrl">
+                            @if (_Menu.Last().Equals(item))
+                            {
+                                <strong>@item.Name</strong>
+                            }
+                            else
+                            {
+                                <span>@item.Name</span>
+                            }
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</nav>

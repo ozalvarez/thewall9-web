@@ -1,0 +1,108 @@
+﻿@model thewall9.data.binding.PageWeb
+@{
+    var _LayoutContent = Html.GetSite().ContentLayout;
+    var _Footer = Html.Find(_LayoutContent, "footer");
+    var _Messages = Html.Find(Model, "messages");
+}
+@section styles{
+
+}
+@section scripts{
+<script type="text/javascript" src="https://thewall9.agilecrm.com/stats/min/agile-min.js"></script>
+<script type="text/javascript">
+    _agile.set_account('bfu8vbor2qe13b4fn55sb7lut5', 'thewall9');
+    var jsMessages = {
+        isEmpty: "@Html.FindValue(_Messages, "isEmpty")",
+        emailNotValid: "@Html.FindValue(_Messages, "emailNotValid")",
+        sending: "@Html.FindValue(_Messages, "sending")",
+        formSent: "@Html.FindValue(_Messages, "contactSuccess")",
+    }
+</script>
+}
+<section id="contact">
+    @Html.Partial("_HeaderPage", Model)
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="office-info">
+                    <h2>@Html.FindValue(_LayoutContent, "company-name")</h2>
+                    <div class="our-office">@Html.FindValue(_Footer, "our-office")</div>
+                    <div class="address">@Html.FindValue(_Footer, "address")</div>
+                    <div class="phone">@Html.FindValue(_Footer, "phone")</div>
+                    <div class="email">
+                        @Html.FindValue(_Footer, "email")
+                    </div>
+                    <ul class="list-inline social">
+                        <li>
+                            <a href="@Html.LinkFacebook()" target="_blank">
+                                <i class="fa fa-facebook-official"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Html.LinkInstagram()" target="_blank">
+                                <i class="fa fa-instagram"></i>
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Html.LinkTwitter()" target="_blank">
+                                <i class="fa fa-twitter-square"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <form id="contact-form" name="form">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control input-lg" id="name" type="text" placeholder='@Html.FindValue(Model,"name")'>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control input-lg" id="last-name" type="text" placeholder='@Html.FindValue(Model,"last-name")'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control input-lg" type="text" placeholder='@Html.FindValue(Model,"company")' required id="company">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control input-lg" type="text" placeholder='@Html.FindValue(Model,"phone")' required id="phone">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control input-lg" type="email" placeholder="Email" required id="email">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <textarea class="form-control input-lg" cols="3" placeholder='@Html.FindValue(Model,"description")' id="form-info"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-contact">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="hidden" name="entry.1207457641" id="entry_1207457641" value="The Player9" />
+                                <button type="button" class="btn btn-primary btn-lg" id="submit">
+                                    @Html.FindValue(Model, "contact-btn-text")
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

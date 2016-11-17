@@ -1,0 +1,137 @@
+﻿@import 'variables.less';
+@import 'mixins.less';
+@import 'mybootstrap.less';
+@import 'keyframes.less';
+
+html, body {
+    margin: 0;
+    padding: 0;
+    .font-body;
+
+    @media (max-width: @screen-xs-max) {
+        margin-top: 20px;
+    }
+}
+
+h1, h2, h3, h4, h5 {
+    .font-heading;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+a {
+    transition: .5s;
+    color: @white;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: @brand-primary;
+    }
+}
+
+.wrapper {
+    display: table;
+    height: 100vh;
+    width: 100%;
+
+    .wrapper-container {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    @media only screen and (max-width : @screen-xs-max) {
+        height: auto;
+        display: block;
+
+        .wrapper-container {
+            display: block;
+            vertical-align: auto;
+        }
+    }
+}
+
+.fix-header {
+    margin-top: @header-height;
+}
+
+i.separator {
+    width: 30px;
+    height: 2px;
+    background-color: @brand-primary;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    &.separator-block {
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    &.separator-white {
+        background-color: @white;
+    }
+}
+
+.subtitle {
+    text-transform: uppercase;
+    font-weight:lighter;
+}
+
+.row-no-margin {
+    &.row {
+        margin-left: 0;
+        margin-right: 0;
+
+        .col-md-4 {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .col-md-3 {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+.header-page {
+    background-repeat: repeat;
+    background-position: center center;
+    background-size: cover;
+    color: @white;
+    text-align: center;
+
+    h1 {
+        margin: (@header-height+40) 0 20px 0;
+        font-size: 60px;
+        text-transform: capitalize;
+    }
+
+    h2 {
+        font-size: 32px;
+        margin-bottom: 60px;
+    }
+
+    @media only screen and (max-width : @screen-md-max) {
+        h1 {
+            margin: 50px 0 10px 0;
+            font-size: 40px;
+        }
+
+        h2 {
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@import 'sections/layout.less';
+@import 'sections/home.less';
+@import 'sections/works.less';
+@import 'sections/services.less';
+@import 'sections/contact.less';
+@import 'sections/blog.less';

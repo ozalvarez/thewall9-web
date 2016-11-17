@@ -1,0 +1,35 @@
+﻿@model thewall9.data.binding.PageWeb
+
+@section styles{
+
+}
+@section scripts{
+    <script src="~/build/js/app.home.min.js"></script>
+}
+<section id="home">
+    <div class="wrapper" id="landing" style="background-image:url(@Html.FindValue(Model,"bg")">
+        <div class="wrapper-container">
+            <div class="container">
+                <h1>
+                    @Html.FindValue(Model, "h1")
+                </h1>
+                <h2>
+                    @Html.FindValue(Model, "h2")
+                </h2>
+                <p>
+                    <a href="@Html.FindValue(Model, "contact-btn-url")" class="btn btn-lg btn-primary">
+                        @Html.FindValue(Model, "contact-btn-text")
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    @Html.Action("Index", "Content", new { Alias = "theplayer9", View = "~/Views/Page/_ThePlayer9.cshtml" })
+    <div id="some-text">
+        <div class="container">
+            @Html.FindValue(Model, "some-text")
+        </div>
+    </div>
+    @Html.Action("Index", "Content", new { Alias = "services", View = "~/Views/Page/_Services.cshtml", Take = 4 })
+    @Html.Action("Index", "Content", new { Alias = "works", View = "~/Views/Page/_Works.cshtml" })
+</section>

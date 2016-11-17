@@ -1,0 +1,74 @@
+﻿@import '../variables.less';
+@import '../mixins.less';
+@import '../keyframes.less';
+
+#home {
+    #landing {
+        background-repeat: repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+        color: @white;
+
+        h1 {
+            font-size: 60px;
+        }
+
+        h2 {
+            .font-body;
+            font-weight: lighter;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+
+        .btn {
+            margin-top: 20px;
+        }
+    }
+
+    #theplayer9 {
+        width: 60%;
+        margin: 0 auto;
+        margin-top: -200px;
+
+        .container {
+            width: 100%;
+        }
+
+        @media only screen and (max-width : @screen-md-max) {
+            width: 90%;
+        }
+
+        @media only screen and (max-width : @screen-sm-max) {
+            margin-top: 0;
+            width: 100%;
+        }
+    }
+
+    #some-text {
+        background-color: lighten(black, 90%);
+        text-align: center;
+        .font-heading;
+        font-size: 26px;
+
+        .container {
+            padding: 40px;
+        }
+    }
+
+    .services {
+        color: @white;
+    }
+
+    @media (max-width: @screen-xs-max) {
+        #landing {
+            h1 {
+                font-size: 40px;
+            }
+
+            h2 {
+                font-size: 16px;
+            }
+        }
+    }
+}

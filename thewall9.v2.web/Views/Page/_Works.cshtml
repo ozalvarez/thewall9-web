@@ -1,0 +1,37 @@
+﻿@model thewall9.data.binding.ContentBindingList
+@{
+
+}
+@section styles{
+
+}
+@section scripts{
+
+}
+<section class="works">
+    <div class="container text-center">
+        <h2>@Html.FindValue(Model, "title")</h2>
+        <p class="subtitle">@Html.FindValue(Model, "subtitle")</p>
+        <i class="separator separator-block"></i>
+    </div>
+    <div class="row row-no-margin">
+        @foreach (var item in Html.FindItems(Model, "list"))
+            {
+            <div class="col-md-3 col-sm-6 col-xs-6 work">
+                <a class="icon" href="@Html.FindValue(item, "work-link-url")">
+                    <img src="@Html.FindValue(item, "work-img")" class="img-responsive" />
+                    <div class="hover">
+                        <div class="info">
+                            <div class="title">
+                                @Html.FindValue(item, "work-name")
+                            </div>
+                            <div class="subtitle">
+                                @Html.FindValue(item, "work-description")
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</section>

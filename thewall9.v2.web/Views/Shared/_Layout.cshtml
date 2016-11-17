@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="@Html.Lang()">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>@Html.TitlePageText()</title>
+    <meta name="description" content="@Html.MetatagDescriptionContent()" />
+
+    @Html.OpenGraphTags()
+
+    @RenderSection("styles", required: false)
+    @if (Html.SiteHasBlog())
+    {
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="@Html.LinkRss()">
+    }
+    <link href="https://fonts.googleapis.com/css?family=Arapey|Roboto:100,400,700" rel="stylesheet">
+    <link href="~/build/css/vendors.min.css" rel="stylesheet" />
+    <link href="~/build/css/app.min.css" rel="stylesheet" />
+</head>
+<body>
+    @Html.GAScript()
+    @Html.Partial("_Header")
+    @RenderBody()
+    @Html.Partial("_Footer")
+    <script src="~/build/js/vendors.min.js"></script>
+    @RenderSection("scripts", required: false)
+    <script src="~/build/js/app.min.js"></script>
+</body>
+</html>
