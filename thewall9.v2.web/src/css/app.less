@@ -9,7 +9,7 @@ html, body {
     .font-body;
 
     @media (max-width: @screen-xs-max) {
-        margin-top: 15px;
+        margin-top: 20px;
     }
 }
 
@@ -78,6 +78,7 @@ i.separator {
 
 .subtitle {
     text-transform: uppercase;
+    font-weight:lighter;
 }
 
 .row-no-margin {
@@ -106,12 +107,25 @@ i.separator {
 
     h1 {
         margin: (@header-height+40) 0 20px 0;
-        font-size:60px;
-        text-transform:capitalize;
+        font-size: 60px;
+        text-transform: capitalize;
     }
-    h2{
-        font-size:32px;
-        margin-bottom:60px;
+
+    h2 {
+        font-size: 32px;
+        margin-bottom: 60px;
+    }
+
+    @media only screen and (max-width : @screen-md-max) {
+        h1 {
+            margin: 50px 0 10px 0;
+            font-size: 40px;
+        }
+
+        h2 {
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
     }
 }
 

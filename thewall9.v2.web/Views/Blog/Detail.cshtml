@@ -3,7 +3,7 @@
     var _Content = ViewBag.BlogContent as thewall9.data.binding.ContentBindingList;
     var _Header = Html.Find(_Content, "header");
     var _Image = string.IsNullOrEmpty(Model.FeatureImageUrl)
-? Html.FindValue(_Content, "blog-header-img").ToString()
+? Html.FindValue(_Header, "bg").ToString()
 : Model.FeatureImageUrl;
     var _LayoutContent = Html.GetSite().ContentLayout;
 }
@@ -14,8 +14,8 @@
     <meta property="og:description" content="@Model.ContentPreview" />
     <meta property="og:site_name" content="@Html.GetSite().Site.SiteName" />
 
-<meta property="article:publisher" content="https://www.facebook.com/somostheplayer9" />
-<meta property="article:author" content="https://www.facebook.com/somostheplayer9/likes"/> 
+    <meta property="article:publisher" content="https://www.facebook.com/somostheplayer9" />
+    <meta property="article:author" content="https://www.facebook.com/somostheplayer9/likes" />
 
     <meta name='twitter:card' content='summary_large_image'>
     <meta name='twitter:site' content='@("@somostheplayer9")' />
@@ -33,16 +33,18 @@
             <i class="separator separator-block"></i>
             <h2>
                 @Model.ContentPreview
+                <span class="meta">
+                    Creado el @String.Format("{0:f}", Model.DateCreated)
+                </span>
             </h2>
+            
         </div>
     </div>
     <article>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <span class="meta">
-                        Creado el @String.Format("{0:f}", Model.DateCreated)
-                    </span>
+                    
                     @if (!string.IsNullOrEmpty(Model.FeatureImageUrl))
                     {
                         <img src="@Model.FeatureImageUrl" class="img-responsive" />

@@ -9,10 +9,12 @@
 
 }
 <section id="theplayer9">
-    <h2>@Html.FindValue(Model, "title")</h2>
-    <p class="subtitle">@Html.FindValue(Model, "subtitle")</p>
-    <i class="separator separator-block"></i>
-    <a href="@Html.FindValue(Model, "url")">
-        <img src="@Html.FindValue(Model, "img")" class="img-responsive center-block" />
-    </a>
+    <div class="container">
+        <h2>@Html.FindValue(Model, "title")</h2>
+        <p class="subtitle">@Html.FindValue(Model, "subtitle")</p>
+        <i class="separator separator-block"></i>
+        <a href="@Html.FindValue(Model, "url")">
+            <img src="@Html.FindValue(Model, "img")" class="img-responsive center-block" />
+        </a>
+    </div>
 </section>

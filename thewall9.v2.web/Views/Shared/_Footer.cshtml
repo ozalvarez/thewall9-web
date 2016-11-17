@@ -67,24 +67,29 @@
             </div>
         </div>
         <hr />
-        <img class="pull-left iso-small" src="@Html.FindValue(_LayoutContent, "logo-iso")" />
-        <div class="pull-left last">
-            <div>
-                @Html.FindValue(_Footer, "copyright")
+        <div class="row">
+            <div class="col-md-1 hidden-xs hidden-sm">
+                <img class="img-responsive center-block" src="@Html.FindValue(_LayoutContent, "logo-iso")" />
             </div>
-            <div>
-                @foreach (var item in @Html.FindItems(_Footer, "link-list"))
-                {
-                    <span>
-                        <a href="@Html.FindValue(item, "link-url")">
-                            @Html.FindValue(item, "link-text")
-                        </a>
-                    </span>
-                    
-                }
+            <div class="col-md-11 col-sm-12">
+                <div class="last">
+                    <div>
+                        @Html.FindValue(_Footer, "copyright")
+                    </div>
+                    <div>
+                        @foreach (var item in @Html.FindItems(_Footer, "link-list"))
+                        {
+                            <span>
+                                <a href="@Html.FindValue(item, "link-url")">
+                                    @Html.FindValue(item, "link-text")
+                                </a>
+                            </span>
+
+                        }
+                    </div>
+                </div>
+
             </div>
         </div>
-        <div class="clear-fix"></div>
-        
     </div>
 </footer>

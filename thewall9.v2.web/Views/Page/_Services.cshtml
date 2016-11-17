@@ -22,7 +22,7 @@
             @foreach (var item in _S)
             {
                 <div class="col-md-3 col-sm-6 service">
-                    <a class="icon" href="#">
+                    <a class="icon" href="@Html.FindValue(item, "url")">
                         @Html.Raw(Html.FindValue(item, "icon-svg"))
 
                     </a>

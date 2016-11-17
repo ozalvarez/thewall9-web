@@ -37,6 +37,7 @@
 }
 .form-control {
   text-transform: uppercase;
+  font-weight: lighter;
 }
 /*
     NAVBAR
@@ -148,7 +149,7 @@ body {
 @media (max-width: 767px) {
   html,
   body {
-    margin-top: 15px;
+    margin-top: 20px;
   }
 }
 h1,
@@ -210,6 +211,7 @@ i.separator.separator-white {
 }
 .subtitle {
   text-transform: uppercase;
+  font-weight: lighter;
 }
 .row-no-margin.row {
   margin-left: 0;
@@ -239,12 +241,23 @@ i.separator.separator-white {
   font-size: 32px;
   margin-bottom: 60px;
 }
+@media only screen and (max-width: 1199px) {
+  .header-page h1 {
+    margin: 50px 0 10px 0;
+    font-size: 40px;
+  }
+  .header-page h2 {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+}
 #footer {
   background-repeat: repeat;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
   color: #FFFFFF;
+  padding-bottom: 40px;
 }
 #footer .intro img.iso {
   margin: 40px;
@@ -271,10 +284,6 @@ i.separator.separator-white {
 #footer .lang {
   text-transform: uppercase;
   font-weight: lighter;
-}
-#footer .iso-small {
-  max-width: 40px;
-  margin-right: 10px;
 }
 #footer .last {
   text-transform: uppercase;
@@ -313,7 +322,23 @@ i.separator.separator-white {
   margin-top: 20px;
 }
 #home #theplayer9 {
-  margin-top: -150px;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: -200px;
+}
+#home #theplayer9 .container {
+  width: 100%;
+}
+@media only screen and (max-width: 1199px) {
+  #home #theplayer9 {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  #home #theplayer9 {
+    margin-top: 0;
+    width: 100%;
+  }
 }
 #home #some-text {
   background-color: #e6e6e6;
@@ -338,25 +363,15 @@ i.separator.separator-white {
 #theplayer9 {
   background-color: #FFFFFF;
   text-align: center;
-  width: 60%;
-  margin: 0 auto;
-  padding: 20px 80px;
-}
-@media only screen and (max-width: 1199px) {
-  #theplayer9 {
-    width: 90%;
-  }
+  padding: 20px 80px 40px 80px;
 }
 @media only screen and (max-width: 991px) {
   #theplayer9 {
-    margin-top: 0;
-    width: 100%;
     padding: 5px;
   }
 }
 #works #theplayer9 {
   background: radial-gradient(circle, #fff, #d7d7d7);
-  width: 100%;
 }
 .works .work {
   position: relative;
@@ -393,8 +408,8 @@ i.separator.separator-white {
   background: radial-gradient(circle, #fff, #d7d7d7);
 }
 #services .content {
-  margin-top: 30px;
-  margin-bottom: 10px;
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 #services .service .icon {
   background-color: transparent;
@@ -455,6 +470,9 @@ i.separator.separator-white {
   margin-top: 15px;
   text-align: center;
 }
+.services .row .service p a.title:hover {
+  color: #181820;
+}
 .services .row .service p .title {
   font-size: 24px;
   font-family: 'Arapey', serif;
@@ -482,6 +500,12 @@ i.separator.separator-white {
 }
 #blog .header-page {
   margin-bottom: 30px;
+}
+#blog .header-page span.meta {
+  display: block;
+  font-size: 16px;
+  color: #b4b4b4;
+  margin-top: 5px;
 }
 #blog .post-preview > a {
   color: #3d3d3d;
@@ -522,14 +546,9 @@ i.separator.separator-white {
 }
 #blog article {
   color: #181820;
-  font-size: 20px;
-}
-#blog article .meta {
-  font-size: 13px;
-  color: #808080;
+  font-size: 18px;
 }
 #blog article p {
-  line-height: 1.5;
   margin: 15px 0;
 }
 #blog article a {
@@ -542,7 +561,13 @@ i.separator.separator-white {
 }
 #blog article h2,
 #blog article h3 {
-  margin-top: 30px;
+  margin-top: 0px;
+}
+#blog article h2 {
+  font-size: 34px;
+}
+#blog article h3 {
+  font-size: 28px;
 }
 #blog #post-footer {
   text-align: center;

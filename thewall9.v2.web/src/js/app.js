@@ -6,6 +6,9 @@
             $(".navbar-custom").addClass("top");
         }
     });
+    if ($(document).scrollTop() > 50) {
+        $(".navbar-custom").removeClass("top");
+    }
     //BLOG IFRAME
     reframe('iframe');
     //CONTACT FROM WITH AGILECRM
