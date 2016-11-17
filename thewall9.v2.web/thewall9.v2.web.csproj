@@ -191,6 +191,37 @@
   <ItemGroup>
     <Content Include="Views\Page\_Works.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Footer.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\css\sections\layout.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Page\Works.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Page\_HeaderPage.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Page\Services.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\css\sections\services.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Page\Contact.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\css\sections\contact.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Blog\Detail.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\css\sections\blog.less" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

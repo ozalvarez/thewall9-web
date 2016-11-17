@@ -30,6 +30,6 @@
             @Html.FindValue(Model, "some-text")
         </div>
     </div>
-    @Html.Action("Index", "Content", new { Alias = "services", View = "~/Views/Page/_Services.cshtml" })
+    @Html.Action("Index", "Content", new { Alias = "services", View = "~/Views/Page/_Services.cshtml", Take = 4 })
     @Html.Action("Index", "Content", new { Alias = "works", View = "~/Views/Page/_Works.cshtml" })
 </section>

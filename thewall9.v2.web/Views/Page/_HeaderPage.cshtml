@@ -1,0 +1,16 @@
+﻿@model thewall9.data.binding.PageWeb
+@{
+    var _Model = Html.Find(Model, "header");
+}
+<div class="header-page" style="background-image:url(@Html.FindValue(_Model,"bg")">
+    <div class="container">
+        <h1>
+            @Html.FindValue(_Model, "h1")
+        </h1>
+        <i class="separator separator-block"></i>
+        <h2>
+            @Html.FindValue(_Model, "h2")
+        </h2>
+        
+    </div>
+</div>

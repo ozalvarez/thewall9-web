@@ -1,6 +1,10 @@
 ﻿@model thewall9.data.binding.ContentBindingList
 @{
-
+    var _S = Html.FindItems(Model, "services-list");
+    if (ViewBag.Take != null)
+    {
+        _S = _S.Take((int)ViewBag.Take).ToList();
+    }
 }
 @section styles{
 
@@ -8,22 +12,22 @@
 @section scripts{
 
 }
-<section id="services">
+<section class="services">
     <canvas id="services-canvas"></canvas>
     <div class="container">
         <h2>@Html.FindValue(Model, "title")</h2>
         <p class="subtitle">@Html.FindValue(Model, "subtitle")</p>
         <i class="separator separator-white"></i>
         <div class="row">
-            @foreach (var item in Html.FindItems(Model, "services-list"))
+            @foreach (var item in _S)
             {
-                <div class="col-md-3 service">
+                <div class="col-md-3 col-sm-6 service">
                     <a class="icon" href="#">
                         @Html.Raw(Html.FindValue(item, "icon-svg"))
 
                     </a>
                     <p>
-                        <a href="#">
+                        <a href="@Html.FindValue(item, "url")" class="title">
                             @Html.FindValue(item, "title")
                         </a>
                     </p>

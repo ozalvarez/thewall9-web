@@ -2,7 +2,7 @@
     var _Menu = Html.GetMenu();
     var _LayoutContent = Html.GetSite().ContentLayout;
 }
-<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-custom navbar-fixed-top top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -22,8 +22,17 @@
             <ul class="nav navbar-nav navbar-right" id="menu">
                 @foreach (var item in _Menu)
                 {
-                    <li data-menuanchor="@(item.FriendlyUrl == "" ? "home" : item.FriendlyUrl.Replace("#", ""))">
-                        <a href="@(item.FriendlyUrl == "" ? "#home" : item.FriendlyUrl)">@item.Name</a>
+                    <li>
+                        <a href="/@item.FriendlyUrl">
+                            @if (_Menu.Last().Equals(item))
+                            {
+                                <strong>@item.Name</strong>
+                            }
+                            else
+                            {
+                                <span>@item.Name</span>
+                            }
+                        </a>
                     </li>
                 }
             </ul>

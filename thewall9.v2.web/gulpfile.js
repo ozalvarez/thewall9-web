@@ -33,7 +33,8 @@ gulp.task('cssmin:vendors', function () {
     //vendors
     return gulp.src([
         './node_modules/bootstrap/dist/css/bootstrap.min.css',
-        './node_modules/font-awesome/css/font-awesome.min.css'
+        './node_modules/font-awesome/css/font-awesome.min.css',
+        './node_modules/toastr/build/toastr.min.css'
     ])
         .pipe(concat('vendors.min.css'))
         .pipe(cssmin())
@@ -55,6 +56,8 @@ gulp.task('minify:vendors', function () {
         './node_modules/jquery/dist/jquery.min.js',
         './node_modules/bootstrap/dist/js/bootstrap.min.js',
         './node_modules/granim/dist/granim.min.js',
+        './node_modules/toastr/build/toastr.min.js',
+        './node_modules/reframe.js/dist/reframe.js'
     ])
         .pipe(concat('vendors.min.js'))
         .pipe(uglify())

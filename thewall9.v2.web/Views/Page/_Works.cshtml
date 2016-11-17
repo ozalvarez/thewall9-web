@@ -8,7 +8,7 @@
 @section scripts{
 
 }
-<section id="works">
+<section class="works">
     <div class="container text-center">
         <h2>@Html.FindValue(Model, "title")</h2>
         <p class="subtitle">@Html.FindValue(Model, "subtitle")</p>
@@ -17,7 +17,7 @@
     <div class="row row-no-margin">
         @foreach (var item in Html.FindItems(Model, "list"))
             {
-            <div class="col-md-3 work">
+            <div class="col-md-3 col-sm-6 col-xs-6 work">
                 <a class="icon" href="@Html.FindValue(item, "work-link-url")">
                     <img src="@Html.FindValue(item, "work-img")" class="img-responsive" />
                     <div class="hover">
@@ -34,9 +34,4 @@
             </div>
         }
     </div>
-    @*<p class="text-center all">
-        <a href="@Html.FindValue(Model, "more-services-btn-url")" class="btn btn-dark btn-lg">
-            @Html.FindValue(Model, "more-services-btn-text")
-        </a>
-    </p>*@
 </section>

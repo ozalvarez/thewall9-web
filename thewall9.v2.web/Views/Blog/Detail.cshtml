@@ -1,0 +1,84 @@
+﻿@model thewall9.data.binding.BlogPostWeb
+@{
+    var _Content = ViewBag.BlogContent as thewall9.data.binding.ContentBindingList;
+    var _Header = Html.Find(_Content, "header");
+    var _Image = string.IsNullOrEmpty(Model.FeatureImageUrl)
+? Html.FindValue(_Content, "blog-header-img").ToString()
+: Model.FeatureImageUrl;
+    var _LayoutContent = Html.GetSite().ContentLayout;
+}
+@section styles{
+    <meta property="og:title" content="@Model.Title" />
+    <meta property="og:url" content="@Request.Url" />
+    <meta property="og:image" content="@_Image" />
+    <meta property="og:description" content="@Model.ContentPreview" />
+    <meta property="og:site_name" content="@Html.GetSite().Site.SiteName" />
+
+<meta property="article:publisher" content="https://www.facebook.com/somostheplayer9" />
+<meta property="article:author" content="https://www.facebook.com/somostheplayer9/likes"/> 
+
+    <meta name='twitter:card' content='summary_large_image'>
+    <meta name='twitter:site' content='@("@somostheplayer9")' />
+    <meta name='twitter:creator' content='@("@somostheplayer9")' />
+    <meta name='twitter:title' content='@Model.Title'>
+    <meta name='twitter:description' content='@Model.ContentPreview'>
+    <meta name='twitter:image' content='@_Image' />
+}
+<section id="blog">
+    <div class="header-page" style="background-image:url(@Html.FindValue(_Header,"bg")">
+        <div class="container">
+            <h1>
+                @Model.Title
+            </h1>
+            <i class="separator separator-block"></i>
+            <h2>
+                @Model.ContentPreview
+            </h2>
+        </div>
+    </div>
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <span class="meta">
+                        Creado el @String.Format("{0:f}", Model.DateCreated)
+                    </span>
+                    @if (!string.IsNullOrEmpty(Model.FeatureImageUrl))
+                    {
+                        <img src="@Model.FeatureImageUrl" class="img-responsive" />
+                    }
+                    @Html.Raw(Model.Content)
+                    <div id="post-footer">
+                        <div class="share">
+                            <h4>COMPARTE ESTE ARTÍCULO</h4>
+                            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                            <div class="addthis_sharing_toolbox"></div>
+                        </div>
+                        @if (Model.Tags != null && Model.Tags.Count > 0)
+                        {
+                            <h4 class="text-center">TAGS</h4>
+                            foreach (var item in Model.Tags)
+                            {
+                                <a href="@Url.Action("tag", "blog", new { BlogTagName = item.BlogTagName })" class="btn btn-default btn-tag">
+                                    @item.BlogTagName
+                                </a>
+                            }
+                        }
+                        @if (Model.Categories != null && Model.Categories.Count > 0)
+                        {
+                            <h4 class="text-center">CATEGORÍAS</h4>
+                            foreach (var item in Model.Categories)
+                            {
+                                <a href="@Url.Action("index", "blog", new { BlogCategoryFriendlyUrl = item.FriendlyUrl })" class="btn btn-default btn-tag">
+                                    @item.BlogCategoryName
+                                </a>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57150847e8277238"></script>

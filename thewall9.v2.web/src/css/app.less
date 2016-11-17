@@ -7,6 +7,10 @@ html, body {
     margin: 0;
     padding: 0;
     .font-body;
+
+    @media (max-width: @screen-xs-max) {
+        margin-top: 15px;
+    }
 }
 
 h1, h2, h3, h4, h5 {
@@ -93,6 +97,27 @@ i.separator {
     }
 }
 
+.header-page {
+    background-repeat: repeat;
+    background-position: center center;
+    background-size: cover;
+    color: @white;
+    text-align: center;
+
+    h1 {
+        margin: (@header-height+40) 0 20px 0;
+        font-size:60px;
+        text-transform:capitalize;
+    }
+    h2{
+        font-size:32px;
+        margin-bottom:60px;
+    }
+}
+
 @import 'sections/layout.less';
 @import 'sections/home.less';
 @import 'sections/works.less';
+@import 'sections/services.less';
+@import 'sections/contact.less';
+@import 'sections/blog.less';

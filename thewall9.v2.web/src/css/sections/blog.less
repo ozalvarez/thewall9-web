@@ -1,0 +1,106 @@
+﻿@import '../variables.less';
+@import '../mixins.less';
+@import '../keyframes.less';
+
+#blog {
+    .header-page {
+        margin-bottom: 30px;
+    }
+
+    .post-preview {
+        > a {
+            color: @gray-dark;
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                color: @brand-primary;
+            }
+
+            > .post-title {
+                font-size: 30px;
+                margin-bottom: 10px;
+            }
+
+            > .post-subtitle {
+                margin: 0;
+                font-weight: 300;
+                margin-bottom: 10px;
+            }
+        }
+
+        > .post-meta {
+            color: @gray;
+            font-size: 18px;
+            font-style: italic;
+            margin-top: 0;
+
+            > a {
+                text-decoration: none;
+                color: @gray-dark;
+
+                &:hover,
+                &:focus {
+                    color: @brand-primary;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            > a {
+                > .post-title {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+
+    article {
+        .meta {
+            font-size: 13px;
+            color: @gray;
+        }
+
+        color: @black;
+        font-size: 20px;
+
+        p {
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+
+        a {
+            text-decoration: underline;
+            color: @brand-primary;
+
+            &:hover,
+            &:focus {
+                color: @brand-primary-faded;
+            }
+        }
+
+        h2, h3 {
+            margin-top: 30px;
+        }
+    }
+
+    #post-footer {
+        text-align: center;
+        padding-bottom: 10px;
+
+        h4 {
+            color: @gray-dark;
+            font-size: 25px;
+            margin: 20px 0 10px;
+        }
+
+        .share {
+            .addthis_sharing_toolbox {
+                margin: 0 auto;
+                width: 200px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

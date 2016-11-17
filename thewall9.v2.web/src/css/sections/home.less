@@ -26,6 +26,10 @@
         }
     }
 
+    #theplayer9 {
+        margin-top: -150px;
+    }
+
     #some-text {
         background-color: lighten(black, 90%);
         text-align: center;
@@ -36,63 +40,18 @@
             padding: 40px;
         }
     }
-
-    #services {
-        position: relative;
+    .services{
         color: @white;
-
-        #services-canvas {
-            position: absolute;
-            display: block;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            right: 0;
-            z-index: -999;
-        }
-
-        .row {
-            .service {
-                .icon {
-                    display: block;
-                    background-color: @white;
-                    border-radius: 50%;
-                    width: 200px;
-                    height: 200px;
-                    padding: 40px;
-                    margin: 0 auto;
-
-                    svg {
-                        fill: @brand-primary;
-                        width: 120px;
-                        height: 120px;
-                    }
-
-                    &:hover {
-                        background-color: transparent;
-                        border: 2px solid @white;
-
-                        svg {
-                            fill: @white;
-                        }
-                    }
-                }
-
-                p {
-                    margin-top: 15px;
-                    text-align: center;
-
-                    a {
-                        font-size: 24px;
-                        .font-heading;
-                        color: @white;
-                    }
-                }
+    }
+    @media (max-width: @screen-xs-max) {
+        #landing {
+            h1 {
+                font-size: 40px;
             }
-        }
 
-        p.all {
-            margin: 25px;
+            h2 {
+                font-size: 16px;
+            }
         }
     }
 }

@@ -1,0 +1,13 @@
+﻿@model thewall9.data.binding.PageWeb
+
+@section styles{
+
+}
+@section scripts{
+
+}
+<section id="works">
+    @Html.Partial("_HeaderPage", Model)
+    @Html.Action("Index", "Content", new { Alias = "theplayer9", View = "~/Views/Page/_ThePlayer9.cshtml" })
+    @Html.Partial("_Works", Model.Content)
+</section>

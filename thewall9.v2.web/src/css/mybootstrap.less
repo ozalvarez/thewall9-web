@@ -3,8 +3,6 @@
     BTN
 */
 .btn {
-   // font-size: 26px;
-    //font-weight: lighter;
     border-radius: 2px;
     text-transform: uppercase;
 
@@ -21,7 +19,8 @@
             color: @white;
         }
     }
-    &.btn-dark{
+
+    &.btn-dark {
         background-color: @black;
         border: 1px solid @black;
         color: @white;
@@ -38,10 +37,13 @@
     &.btn-default {
         color: @brand-primary;
     }
-
     /*@media only screen and (max-width : 768px) {
         font-size: 20px;
     }*/
+}
+
+.form-control {
+    text-transform: uppercase;
 }
 /*
     NAVBAR
@@ -82,8 +84,13 @@
 }
 
 .navbar-custom {
-    background-color: fade(@black, 80%);;
+    background-color: @black;
     border-color: @bgHighlight;
+    transition: all .4s ease-in;
+
+    &.top {
+        background-color: fade(@black, 0%);
+    }
 
     .navbar-text {
         color: @colDefault;
@@ -94,9 +101,9 @@
 
         > li {
             > a {
-                text-transform:uppercase;
-                font-size:larger;
-                font-weight:lighter;
+                text-transform: uppercase;
+                font-size: larger;
+                font-weight: lighter;
                 color: @white;
                 font-family: @font-body;
 
@@ -176,13 +183,25 @@
     }
 }
 
+@media (max-width: @screen-md-max) {
+    .navbar-custom {
+        .navbar-nav {
+            > li {
+                > a {
+                    font-size: medium;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: @screen-xs-max) {
     .navbar-custom {
         .navbar-brand {
             padding: 5px;
 
             img {
-                height: 35px;
+                height: 40px;
             }
         }
 
