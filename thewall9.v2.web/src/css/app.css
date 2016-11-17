@@ -140,6 +140,55 @@
     background-color: #181820;
   }
 }
+.icon-scroll,
+.icon-scroll:before {
+  position: absolute;
+  left: 50%;
+}
+.icon-scroll {
+  width: 25px;
+  height: 50px;
+  margin-left: -20px;
+  bottom: 150px;
+  margin-top: -35px;
+  box-shadow: inset 0 0 0 1px #fff;
+  border-radius: 25px;
+}
+.icon-scroll:before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  margin-left: -4px;
+  top: 8px;
+  border-radius: 4px;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: scroll;
+          animation-name: scroll;
+}
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+}
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+}
 html,
 body {
   margin: 0;
@@ -211,7 +260,6 @@ i.separator.separator-white {
 }
 .subtitle {
   text-transform: uppercase;
-  font-weight: lighter;
 }
 .row-no-margin.row {
   margin-left: 0;
@@ -308,6 +356,8 @@ i.separator.separator-white {
   background-attachment: fixed;
   background-size: cover;
   color: #FFFFFF;
+  position: relative;
+  z-index: -1;
 }
 #home #landing h1 {
   font-size: 60px;
@@ -324,7 +374,7 @@ i.separator.separator-white {
 #home #theplayer9 {
   width: 60%;
   margin: 0 auto;
-  margin-top: -200px;
+  margin-top: -100px;
 }
 #home #theplayer9 .container {
   width: 100%;
@@ -481,7 +531,7 @@ i.separator.separator-white {
   margin: 25px;
 }
 #contact {
-  background: radial-gradient(circle, #fff, #b6b6b6);
+  background: radial-gradient(circle, #fff, #d7d7d7);
 }
 #contact .office-info {
   background: #FFFFFF;

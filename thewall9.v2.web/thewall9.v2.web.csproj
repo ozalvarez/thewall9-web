@@ -215,6 +215,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\thewall9-com - Web Deploy.pubxml" />
+    <Content Include="src\css\util\icon-scroll.less" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
