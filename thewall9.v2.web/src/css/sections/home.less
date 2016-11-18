@@ -3,6 +3,18 @@
 @import '../keyframes.less';
 
 #home {
+    .wrapper {
+        @media only screen and (max-width : @screen-xs-max) {
+            height: auto;
+            display: block;
+
+            .wrapper-container {
+                display: block;
+                vertical-align: auto;
+            }
+        }
+    }
+
     #landing {
         background-repeat: repeat;
         background-position: center center;

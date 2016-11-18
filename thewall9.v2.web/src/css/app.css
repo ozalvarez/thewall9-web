@@ -229,16 +229,6 @@ a:active {
   display: table-cell;
   vertical-align: middle;
 }
-@media only screen and (max-width: 767px) {
-  .wrapper {
-    height: auto;
-    display: block;
-  }
-  .wrapper .wrapper-container {
-    display: block;
-    vertical-align: auto;
-  }
-}
 .fix-header {
   margin-top: 100px;
 }
@@ -299,6 +289,33 @@ i.separator.separator-white {
     margin-bottom: 30px;
   }
 }
+#loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: radial-gradient(circle, #fff, #d7d7d7);
+}
+#loader #progress {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
+#loader .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  margin-top: -60px;
+  margin-left: -60px;
+}
+#loader .logo #progress-number {
+  text-align: center;
+  margin-top: 5px;
+  color: #ee3454;
+}
 #footer {
   background-repeat: repeat;
   background-position: center center;
@@ -349,6 +366,16 @@ i.separator.separator-white {
 }
 .office-info .email {
   color: #ee3454;
+}
+@media only screen and (max-width: 767px) {
+  #home .wrapper {
+    height: auto;
+    display: block;
+  }
+  #home .wrapper .wrapper-container {
+    display: block;
+    vertical-align: auto;
+  }
 }
 #home #landing {
   background-repeat: repeat;

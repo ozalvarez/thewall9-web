@@ -3,7 +3,7 @@
     var _LayoutContent = Html.GetSite().ContentLayout;
     var _Footer = Html.Find(_LayoutContent, "footer");
 }
-<footer id="footer" style="background-image:url(@Html.FindValue(_Footer, "bg")">
+<footer id="footer" class="bg-img" style="background-image:url(@Html.FindValue(_Footer, "bg")">
     <div class="text-center intro">
         <img class="iso" src="@Html.FindValue(_LayoutContent, "logo-iso")" />
         <p class="title">@Html.FindValue(_Footer, "title")</p>

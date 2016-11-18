@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var _LayoutContent = Html.GetSite().ContentLayout;
+}
+<!DOCTYPE html>
 <html lang="@Html.Lang()">
 <head>
     <meta charset="utf-8" />
@@ -17,10 +20,25 @@
     <link href="https://fonts.googleapis.com/css?family=Arapey|Roboto:100,400,700" rel="stylesheet">
     <link href="~/build/css/vendors.min.css" rel="stylesheet" />
     <link href="~/build/css/app.min.css" rel="stylesheet" />
+    @if (Request.QueryString["debug"] != null)
+    {
+        <script src="//console.re/connector.js" data-channel="thewall9.com" id="consolerescript"></script>
+    }
 </head>
 <body>
     @Html.GAScript()
     @Html.Partial("_Header")
+    <div id="loader">
+        <div class="wrapper">
+            <div class="wrapper-container">
+                <div id="progress"></div>
+                <div class="logo">
+                    <img src="@Html.FindValue(_LayoutContent, "logo-iso")" class="img-responsive center-block" />
+                    <div id="progress-number"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     @RenderBody()
     @Html.Partial("_Footer")
     <script src="~/build/js/vendors.min.js"></script>
