@@ -59,6 +59,7 @@ gulp.task('minify:vendors', function () {
         './node_modules/toastr/build/toastr.min.js',
         './node_modules/reframe.js/dist/reframe.js',
         './node_modules/progressbar.js/dist/progressbar.min.js',
+        './src/js/others/*.js',
     ])
         .pipe(concat('vendors.min.js'))
         .pipe(uglify())

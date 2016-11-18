@@ -116,6 +116,7 @@
     <Content Include="Global.asax" />
     <Content Include="robots.txt" />
     <Content Include="package.json" />
+    <Content Include="src\js\others\bgLoaded.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
