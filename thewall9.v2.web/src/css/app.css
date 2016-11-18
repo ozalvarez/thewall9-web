@@ -264,9 +264,10 @@ i.separator.separator-white {
   padding-right: 0;
 }
 .header-page {
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  background-attachment: scroll;
   color: #FFFFFF;
   text-align: center;
 }
@@ -279,7 +280,7 @@ i.separator.separator-white {
   font-size: 32px;
   margin-bottom: 60px;
 }
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 767px) {
   .header-page h1 {
     margin: 50px 0 10px 0;
     font-size: 40px;
@@ -317,10 +318,10 @@ i.separator.separator-white {
   color: #ee3454;
 }
 #footer {
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed;
   background-size: cover;
+  background-attachment: scroll;
   color: #FFFFFF;
   padding-bottom: 40px;
 }
@@ -378,10 +379,10 @@ i.separator.separator-white {
   }
 }
 #home #landing {
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed;
   background-size: cover;
+  background-attachment: scroll;
   color: #FFFFFF;
   position: relative;
   z-index: -1;

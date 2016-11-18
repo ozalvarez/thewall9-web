@@ -13,7 +13,7 @@ html, body {
         margin-top: 20px;
     }
 }
- 
+
 h1, h2, h3, h4, h5 {
     .font-heading;
 }
@@ -89,9 +89,7 @@ i.separator {
 }
 
 .header-page {
-    background-repeat: repeat;
-    background-position: center center;
-    background-size: cover;
+    .bg-cover;
     color: @white;
     text-align: center;
 
@@ -106,7 +104,7 @@ i.separator {
         margin-bottom: 60px;
     }
 
-    @media only screen and (max-width : @screen-md-max) {
+    @media only screen and (max-width : @screen-xs-max) {
         h1 {
             margin: 50px 0 10px 0;
             font-size: 40px;
@@ -127,5 +125,3 @@ i.separator {
 @import 'sections/services.less';
 @import 'sections/contact.less';
 @import 'sections/blog.less';
-
-

@@ -21,7 +21,7 @@ function loaded() {
     if (_contItemsToLoad >= _totalItemsToLoad) {
         setTimeout(function () {
             $("#loader").fadeOut("slow");
-        }, 0);
+        }, 500);
     }
     _contItemsToLoad++;
 }

@@ -4,7 +4,7 @@
     var _Header = Html.Find(_Content, "header");
 }
 <section id="blog">
-    <div class="header-page" style="background-image:url(@Html.FindValue(_Header,"bg")">
+    <div class="header-page" style="background-image:url('@Html.FindValue(_Header,"bg")')">
         <div class="container">
             <h1>
                 @Html.FindValue(_Header, "h1")
