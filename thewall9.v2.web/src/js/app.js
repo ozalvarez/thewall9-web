@@ -60,6 +60,7 @@ $(document).ready(function () {
     }
     //BLOG IFRAME
     reframe('iframe');
+    
     //CONTACT FROM WITH AGILECRM
     function validateForm() {
         if ($("#name").val() == "") {
