@@ -140,6 +140,55 @@
     background-color: #181820;
   }
 }
+.icon-scroll,
+.icon-scroll:before {
+  position: absolute;
+  left: 50%;
+}
+.icon-scroll {
+  width: 25px;
+  height: 50px;
+  margin-left: -20px;
+  bottom: 150px;
+  margin-top: -35px;
+  box-shadow: inset 0 0 0 1px #fff;
+  border-radius: 25px;
+}
+.icon-scroll:before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  margin-left: -4px;
+  top: 8px;
+  border-radius: 4px;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: scroll;
+          animation-name: scroll;
+}
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+}
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+}
 html,
 body {
   margin: 0;
@@ -180,16 +229,6 @@ a:active {
   display: table-cell;
   vertical-align: middle;
 }
-@media only screen and (max-width: 767px) {
-  .wrapper {
-    height: auto;
-    display: block;
-  }
-  .wrapper .wrapper-container {
-    display: block;
-    vertical-align: auto;
-  }
-}
 .fix-header {
   margin-top: 100px;
 }
@@ -211,7 +250,6 @@ i.separator.separator-white {
 }
 .subtitle {
   text-transform: uppercase;
-  font-weight: lighter;
 }
 .row-no-margin.row {
   margin-left: 0;
@@ -226,9 +264,10 @@ i.separator.separator-white {
   padding-right: 0;
 }
 .header-page {
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  background-attachment: scroll;
   color: #FFFFFF;
   text-align: center;
 }
@@ -241,7 +280,7 @@ i.separator.separator-white {
   font-size: 32px;
   margin-bottom: 60px;
 }
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 767px) {
   .header-page h1 {
     margin: 50px 0 10px 0;
     font-size: 40px;
@@ -251,11 +290,38 @@ i.separator.separator-white {
     margin-bottom: 30px;
   }
 }
+#loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: radial-gradient(circle, #fff, #d7d7d7);
+}
+#loader #progress {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
+#loader .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  margin-top: -60px;
+  margin-left: -60px;
+}
+#loader .logo #progress-number {
+  text-align: center;
+  margin-top: 5px;
+  color: #ee3454;
+}
 #footer {
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed;
   background-size: cover;
+  background-attachment: scroll;
   color: #FFFFFF;
   padding-bottom: 40px;
 }
@@ -302,12 +368,24 @@ i.separator.separator-white {
 .office-info .email {
   color: #ee3454;
 }
+@media only screen and (max-width: 767px) {
+  #home .wrapper {
+    height: auto;
+    display: block;
+  }
+  #home .wrapper .wrapper-container {
+    display: block;
+    vertical-align: auto;
+  }
+}
 #home #landing {
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed;
   background-size: cover;
+  background-attachment: scroll;
   color: #FFFFFF;
+  position: relative;
+  z-index: -1;
 }
 #home #landing h1 {
   font-size: 60px;
@@ -324,7 +402,7 @@ i.separator.separator-white {
 #home #theplayer9 {
   width: 60%;
   margin: 0 auto;
-  margin-top: -200px;
+  margin-top: -100px;
 }
 #home #theplayer9 .container {
   width: 100%;
@@ -481,7 +559,7 @@ i.separator.separator-white {
   margin: 25px;
 }
 #contact {
-  background: radial-gradient(circle, #fff, #b6b6b6);
+  background: radial-gradient(circle, #fff, #d7d7d7);
 }
 #contact .office-info {
   background: #FFFFFF;

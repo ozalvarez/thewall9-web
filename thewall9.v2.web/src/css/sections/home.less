@@ -3,12 +3,23 @@
 @import '../keyframes.less';
 
 #home {
+    .wrapper {
+        @media only screen and (max-width : @screen-xs-max) {
+            height: auto;
+            display: block;
+
+            .wrapper-container {
+                display: block;
+                vertical-align: auto;
+            }
+        }
+    }
+
     #landing {
-        background-repeat: repeat;
-        background-position: center center;
-        background-attachment: fixed;
-        background-size: cover;
+        .bg-cover;
         color: @white;
+        position: relative;
+        z-index: -1;
 
         h1 {
             font-size: 60px;
@@ -29,7 +40,7 @@
     #theplayer9 {
         width: 60%;
         margin: 0 auto;
-        margin-top: -200px;
+        margin-top: -100px;
 
         .container {
             width: 100%;

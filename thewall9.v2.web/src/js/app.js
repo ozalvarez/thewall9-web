@@ -1,4 +1,53 @@
-﻿$(document).ready(function () {
+﻿function log(val) {
+    if (console.re === undefined)
+        console.log(val);
+    else
+        console.re.log(val);
+}
+var _fonts = ['Arapey', 'Roboto'];
+var _totalItemsToLoad = $(".bg-img").length + document.images.length;
+var _contItemsToLoad = 1;
+
+var circle = new ProgressBar.Circle('#progress', {
+    color: '#ee3454',
+    duration: 500,
+    easing: 'easeInOut'
+});
+
+function loaded() {
+    //console.log("Loading: " + _contItemsToLoad + "/" + _totalItemsToLoad);
+    $('#progress-number').html(_contItemsToLoad + "/" + _totalItemsToLoad)
+    circle.animate(_contItemsToLoad / _totalItemsToLoad);
+    if (_contItemsToLoad >= _totalItemsToLoad) {
+        setTimeout(function () {
+            $("#loader").fadeOut("slow");
+        }, 500);
+    }
+    _contItemsToLoad++;
+}
+function loadImages() {
+    for (var i = 0; i < document.images.length; i++) {
+        var tImg = new Image();
+        tImg.onload = loaded;
+        tImg.onerror = loaded;
+        tImg.src = document.images[i].src;
+        if (document.images[i].src == '')
+            loaded();
+        //log("Loading IMG");
+    }
+
+    $('.bg-img').bgLoaded({
+        afterLoaded: function () {
+            this.addClass('bg-loaded');
+            loaded();
+            //log("Loading IMG BG");
+        }
+    });
+}
+$(function () {
+    loadImages();
+})
+$(document).ready(function () {
     $(window).scroll(function () {
         if ($(document).scrollTop() > 50) {
             $(".navbar-custom").removeClass("top");
@@ -11,6 +60,7 @@
     }
     //BLOG IFRAME
     reframe('iframe');
+    
     //CONTACT FROM WITH AGILECRM
     function validateForm() {
         if ($("#name").val() == "") {

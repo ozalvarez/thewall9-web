@@ -2,6 +2,7 @@
 @import 'mixins.less';
 @import 'mybootstrap.less';
 @import 'keyframes.less';
+@import 'util/icon-scroll.less';
 
 html, body {
     margin: 0;
@@ -41,16 +42,6 @@ a {
         display: table-cell;
         vertical-align: middle;
     }
-
-    @media only screen and (max-width : @screen-xs-max) {
-        height: auto;
-        display: block;
-
-        .wrapper-container {
-            display: block;
-            vertical-align: auto;
-        }
-    }
 }
 
 .fix-header {
@@ -78,7 +69,6 @@ i.separator {
 
 .subtitle {
     text-transform: uppercase;
-    font-weight:lighter;
 }
 
 .row-no-margin {
@@ -99,9 +89,7 @@ i.separator {
 }
 
 .header-page {
-    background-repeat: repeat;
-    background-position: center center;
-    background-size: cover;
+    .bg-cover;
     color: @white;
     text-align: center;
 
@@ -116,7 +104,7 @@ i.separator {
         margin-bottom: 60px;
     }
 
-    @media only screen and (max-width : @screen-md-max) {
+    @media only screen and (max-width : @screen-xs-max) {
         h1 {
             margin: 50px 0 10px 0;
             font-size: 40px;
@@ -128,6 +116,8 @@ i.separator {
         }
     }
 }
+
+
 
 @import 'sections/layout.less';
 @import 'sections/home.less';
